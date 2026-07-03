@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
+import { MswProvider } from '@/mocks/msw-provider';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -14,7 +15,9 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="zh-CN" className="dark">
-      <body>{children}</body>
+      <body>
+        <MswProvider>{children}</MswProvider>
+      </body>
     </html>
   );
 }
