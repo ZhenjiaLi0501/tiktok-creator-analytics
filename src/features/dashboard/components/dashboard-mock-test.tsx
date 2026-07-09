@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 
 import { getDashboardOverview } from '@/services/dashboard';
 import type { PlatformOverview } from '@/types/dashboard';
+import { MetricCard } from '@/components/business/metric-card';
 
 export function DashboardMockTest() {
   const [data, setData] = useState<PlatformOverview | null>(null);
@@ -45,31 +46,33 @@ export function DashboardMockTest() {
 
   return (
     <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-      <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 shadow-lg">
-        <div className="text-sm text-slate-400">创作者总数</div>
-        <div className="mt-3 text-3xl font-bold text-white">
-          {data.totalCreators.toLocaleString()}
-        </div>
-      </div>
+      <MetricCard
+        title="创作者总数"
+        value={data.totalCreators.toLocaleString()}
+        trend={{ value: '+12.5%', type: 'up' }}
+        description="较上周增长"
+      />
 
-      <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 shadow-lg">
-        <div className="text-sm text-slate-400">活跃创作者</div>
-        <div className="mt-3 text-3xl font-bold text-white">
-          {data.activeCreators.toLocaleString()}
-        </div>
-      </div>
+      <MetricCard
+        title="活跃创作者"
+        value={data.activeCreators.toLocaleString()}
+        trend={{ value: '+8.3%', type: 'up' }}
+        description="较上周增长"
+      />
 
-      <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 shadow-lg">
-        <div className="text-sm text-slate-400">视频总量</div>
-        <div className="mt-3 text-3xl font-bold text-white">
-          {data.totalVideos.toLocaleString()}
-        </div>
-      </div>
+      <MetricCard
+        title="视频总量"
+        value={data.totalVideos.toLocaleString()}
+        trend={{ value: '+5.2%', type: 'up' }}
+        description="较上周增长"
+      />
 
-      <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 shadow-lg">
-        <div className="text-sm text-slate-400">平均互动率</div>
-        <div className="mt-3 text-3xl font-bold text-white">{data.avgEngagementRate}%</div>
-      </div>
+      <MetricCard
+        title="平均互动率"
+        value={`${data.avgEngagementRate}%`}
+        trend={{ value: '+1.1%', type: 'up' }}
+        description="较上周增长"
+      />
     </div>
   );
 }
