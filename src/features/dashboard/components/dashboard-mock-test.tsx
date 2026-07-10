@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { getDashboardOverview } from '@/services/dashboard';
 import { MetricCard } from '@/components/business/metric-card';
 import type { DashboardDateRange, PlatformOverview } from '@/types/dashboard';
+import { ErrorState } from '@/components/common/error-state';
 
 type DashboardMockTestProps = {
   dateRange?: DashboardDateRange;
@@ -34,9 +35,13 @@ export function DashboardMockTest({ dateRange = '7d' }: DashboardMockTestProps) 
 
   if (errorMessage) {
     return (
-      <div className="mt-6 rounded-xl border border-red-500/30 bg-red-500/10 p-4 text-sm text-red-300">
-        Mock 接口请求失败：{errorMessage}
-      </div>
+      <ErrorState
+        title="Mock 接口请求失败"
+        description="当前数据请求出现异常，请稍后重试"
+        errorMessage={errorMessage}
+        actionText="重新加载"
+        onAction={() => window.location.reload()}
+      />
     );
   }
 
