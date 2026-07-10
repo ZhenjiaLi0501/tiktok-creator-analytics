@@ -6,6 +6,7 @@ import { getDashboardOverview } from '@/services/dashboard';
 import { MetricCard } from '@/components/business/metric-card';
 import type { DashboardDateRange, PlatformOverview } from '@/types/dashboard';
 import { ErrorState } from '@/components/common/error-state';
+import { LoadingState } from '@/components/common/loading-state';
 
 type DashboardMockTestProps = {
   dateRange?: DashboardDateRange;
@@ -47,9 +48,11 @@ export function DashboardMockTest({ dateRange = '7d' }: DashboardMockTestProps) 
 
   if (!data) {
     return (
-      <div className="mt-6 rounded-xl border border-white/10 bg-white/[0.04] p-4 text-sm text-slate-400">
-        正在请求 Mock 数据...
-      </div>
+      <LoadingState
+        title="核心指标加载中"
+        description="正在通过MSW Mock 接口获取平台运营指标"
+        rows={4}
+      />
     );
   }
 
