@@ -46,6 +46,7 @@ export function EmptyState({
           {actionText}
         </Button>
       ) : null}
+      {children ? <div className="mt-6">{children}</div> : null}
     </div>
   );
 }
