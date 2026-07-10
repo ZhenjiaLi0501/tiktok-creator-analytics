@@ -77,18 +77,26 @@ export function Pagination({
   return (
     <div
       className={cn(
-        'flex flex-col gap-4 rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 md:flex-row md:items-center md:justify-between',
+        'flex flex-col gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-3 sm:p-4 lg:flex-row lg:items-center lg:justify-between',
         className,
       )}
     >
-      <div className="text-sm text-slate-400">
-        共 <span className="text-white">{total}</span> 条数据，当前显示{' '}
-        <span className="text-white">{start}</span> - <span className="text-white">{end}</span> 条
+      <div className="text-center text-sm text-slate-400 lg:text-left">
+        <span className="sm:hidden">
+          共 <span className="text-white">{total}</span> 条，第{' '}
+          <span className="text-white">{currentPage}</span> /{' '}
+          <span className="text-white">{totalPages}</span> 页
+        </span>
+
+        <span className="hidden sm:inline">
+          共 <span className="text-white">{total}</span> 条数据，当前显示{' '}
+          <span className="text-white">{start}</span> - <span className="text-white">{end}</span> 条
+        </span>
       </div>
 
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center lg:justify-end">
         {onPageSizeChange ? (
-          <div className="flex items-center gap-2 text-sm text-slate-400">
+          <div className="flex items-center justify-center gap-2 text-sm text-slate-400">
             <span>每页</span>
 
             <select
@@ -109,7 +117,7 @@ export function Pagination({
           </div>
         ) : null}
 
-        <div className="flex flex-wrap items-center gap-2">
+        <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-2 sm:flex sm:flex-wrap">
           <Button
             type="button"
             variant="outline"
@@ -121,35 +129,41 @@ export function Pagination({
             上一页
           </Button>
 
-          {pageItems.map((item) => {
-            if (item === 'left-ellipsis' || item === 'right-ellipsis') {
+          <div className="rounded-lg border border-white/10 bg-black/20 px-3 py-2 text-center text-xs text-slate-300 sm:hidden">
+            {currentPage} / {totalPages}
+          </div>
+
+          <div className="hidden items-center gap-2 sm:flex">
+            {pageItems.map((item) => {
+              if (item === 'left-ellipsis' || item === 'right-ellipsis') {
+                return (
+                  <span key={item} className="px-2 text-sm text-slate-500">
+                    ...
+                  </span>
+                );
+              }
+
+              const isActive = item === currentPage;
+
               return (
-                <span key={item} className="px-2 text-sm text-slate-500">
-                  ...
-                </span>
+                <Button
+                  key={item}
+                  type="button"
+                  variant={isActive ? 'default' : 'outline'}
+                  size="sm"
+                  onClick={() => handlePageChange(item)}
+                  className={cn(
+                    'min-w-9',
+                    isActive
+                      ? 'bg-douyin-red text-white hover:bg-douyin-red/90'
+                      : 'border-white/10 bg-white/[0.04] text-slate-300 hover:bg-white/[0.08] hover:text-white',
+                  )}
+                >
+                  {item}
+                </Button>
               );
-            }
-
-            const isActive = item === currentPage;
-
-            return (
-              <Button
-                key={item}
-                type="button"
-                variant={isActive ? 'default' : 'outline'}
-                size="sm"
-                onClick={() => handlePageChange(item)}
-                className={cn(
-                  'min-w-9',
-                  isActive
-                    ? 'bg-douyin-red text-white hover:bg-douyin-red/90'
-                    : 'border-white/10 bg-white/[0.04] text-slate-300 hover:bg-white/[0.08] hover:text-white',
-                )}
-              >
-                {item}
-              </Button>
-            );
-          })}
+            })}
+          </div>
 
           <Button
             type="button"
