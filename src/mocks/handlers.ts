@@ -1,3 +1,3 @@
-import { dashboarldHandlers } from '@/mocks/handlers/dashboard';
+import { dashboardHandlers } from '@/mocks/handlers/dashboard';
 
-export const handlers = [...dashboarldHandlers];
+export const handlers = [...dashboardHandlers];

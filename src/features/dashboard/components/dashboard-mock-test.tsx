@@ -3,10 +3,14 @@
 import { useEffect, useState } from 'react';
 
 import { getDashboardOverview } from '@/services/dashboard';
-import type { PlatformOverview } from '@/types/dashboard';
 import { MetricCard } from '@/components/business/metric-card';
+import type { DashboardDateRange, PlatformOverview } from '@/types/dashboard';
 
-export function DashboardMockTest() {
+type DashboardMockTestProps = {
+  dateRange?: DashboardDateRange;
+};
+
+export function DashboardMockTest({ dateRange = '7d' }: DashboardMockTestProps) {
   const [data, setData] = useState<PlatformOverview | null>(null);
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -14,7 +18,7 @@ export function DashboardMockTest() {
     async function fetchOverview() {
       try {
         const overview = await getDashboardOverview({
-          dataRange: '7d',
+          dateRange,
           platform: 'douyin',
           category: 'all',
         });
@@ -26,7 +30,7 @@ export function DashboardMockTest() {
     }
 
     fetchOverview();
-  }, []);
+  }, [dateRange]);
 
   if (errorMessage) {
     return (

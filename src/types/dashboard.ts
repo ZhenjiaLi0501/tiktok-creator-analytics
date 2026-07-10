@@ -1,3 +1,5 @@
+export type DashboardDateRange = 'today' | '7d' | '30d' | 'custom';
+
 export type PlatformOverview = {
   totalCreators: number;
   activeCreators: number;
@@ -11,7 +13,7 @@ export type PlatformOverview = {
 };
 
 export type DashboardOverviewQuery = {
-  dataRange?: 'today' | '7d' | '30d' | 'custom';
+  dateRange?: DashboardDateRange;
   platform?: 'douyin';
   category?: string;
 };
