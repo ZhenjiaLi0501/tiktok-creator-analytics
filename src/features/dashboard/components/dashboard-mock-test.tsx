@@ -21,7 +21,6 @@ export function DashboardMockTest({ dateRange = '7d' }: DashboardMockTestProps) 
       try {
         const overview = await getDashboardOverview({
           dateRange,
-          platform: 'douyin',
           category: 'all',
         });
 

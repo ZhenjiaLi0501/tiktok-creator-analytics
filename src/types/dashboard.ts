@@ -14,6 +14,30 @@ export type PlatformOverview = {
 
 export type DashboardOverviewQuery = {
   dateRange?: DashboardDateRange;
-  platform?: 'douyin';
   category?: string;
+};
+
+export type DashboardTrendPoint = {
+  date: string;
+  playCount: number;
+  likeCount: number;
+  commentCount: number;
+  shareCount: number;
+  activeCreators: number;
+  publishedVideos: number;
+};
+export type DashboardTrendQuery = {
+  dateRange?: DashboardDateRange;
+  category?: string;
+};
+
+export type DashboardCategoryItem = {
+  category: string;
+  videoCount: number;
+  playCount: number;
+  percentage: number;
+};
+
+export type DashboardCategoryQuery = {
+  dateRange?: DashboardDateRange;
 };
