@@ -28,3 +28,10 @@ export function getDashboardCategory(query?: DashboardCategoryQuery) {
     query,
   });
 }
+
+export function getDashboardPublishTrend(query?: DashboardTrendQuery) {
+  return request<DashboardTrendPoint[]>('/api/dashboard/publish-trend', {
+    method: 'GET',
+    query,
+  });
+}

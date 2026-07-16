@@ -41,3 +41,13 @@ export type DashboardCategoryItem = {
 export type DashboardCategoryQuery = {
   dateRange?: DashboardDateRange;
 };
+
+export type DashboardPublishTrendPoint = {
+  date: string;
+  publishedVideos: number;
+  activeCreators: number;
+};
+export type DashboardPublishTrendQuery = {
+  dateRange?: DashboardDateRange;
+  category?: string;
+};

@@ -3,6 +3,7 @@ import type {
   PlatformOverview,
   DashboardTrendPoint,
   DashboardCategoryItem,
+  DashboardPublishTrendPoint,
 } from '@/types/dashboard';
 
 const baseOverview: PlatformOverview = {
@@ -119,6 +120,43 @@ const categoryBaseData: DashboardCategoryItem[] = [
     percentage: 8.0,
   },
 ];
+const publishTrendBaseData: DashboardPublishTrendPoint[] = [
+  {
+    date: '05-14',
+    publishedVideos: 48200,
+    activeCreators: 12600,
+  },
+  {
+    date: '05-15',
+    publishedVideos: 53600,
+    activeCreators: 14800,
+  },
+  {
+    date: '05-16',
+    publishedVideos: 51200,
+    activeCreators: 13900,
+  },
+  {
+    date: '05-17',
+    publishedVideos: 64800,
+    activeCreators: 17200,
+  },
+  {
+    date: '05-18',
+    publishedVideos: 69200,
+    activeCreators: 18600,
+  },
+  {
+    date: '05-19',
+    publishedVideos: 66400,
+    activeCreators: 17900,
+  },
+  {
+    date: '05-20',
+    publishedVideos: 78600,
+    activeCreators: 21300,
+  },
+];
 
 const trendMultiplierMap: Record<DashboardDateRange, number> = {
   today: 0.18,
@@ -133,6 +171,15 @@ const dateRangeMultiplierMap: Record<DashboardDateRange, number> = {
   '30d': 3.8,
   custom: 1.6,
 };
+
+export function createDashboardPublishTrendMock(dateRange: DashboardDateRange = '7d') {
+  const multiplier = trendMultiplierMap[dateRange];
+  return publishTrendBaseData.map((point) => ({
+    ...point,
+    publishedVideos: Math.round(point.publishedVideos * multiplier),
+    activeCreators: Math.round(point.activeCreators * multiplier),
+  }));
+}
 
 function scaleTrendPoint(point: DashboardTrendPoint, multiplier: number): DashboardTrendPoint {
   return {

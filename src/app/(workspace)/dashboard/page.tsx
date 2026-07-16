@@ -2,7 +2,7 @@ import { PageHeader } from '@/components/business/page-header';
 import { DashboardOverviewSection } from '@/features/dashboard/components/dashboard-overview-section';
 import { DashboardTrendSection } from '@/features/dashboard/components/dashboard-trend-section';
 import { DashboardCategorySection } from '@/features/dashboard/components/dashboard-category-section';
-
+import { DashboardPublishTrendSection } from '@/features/dashboard/components/dashboard-publish-trend-section';
 export default function DashboardPage() {
   return (
     <section className="space-y-8">
@@ -16,6 +16,7 @@ export default function DashboardPage() {
 
       <DashboardTrendSection />
       <DashboardCategorySection />
+      <DashboardPublishTrendSection />
     </section>
   );
 }
