@@ -45,9 +45,8 @@ export function DashboardCategoryChart({ dateRange = '7d' }: DashboardCategoryCh
         formatter: '{b}<br/>视频数：{c}<br/>占比：{d}%',
       },
       legend: {
-        orient: 'vertical',
-        right: 12,
-        top: 'center',
+        bottom: 0,
+        left: 'center',
         textStyle: {
           color: '#94A3B8',
         },
@@ -57,7 +56,7 @@ export function DashboardCategoryChart({ dateRange = '7d' }: DashboardCategoryCh
           name: '内容分类',
           type: 'pie',
           radius: ['45%', '70%'],
-          center: ['38%', '50%'],
+          center: ['50%', '43%'],
           avoidLabelOverlap: true,
           itemStyle: {
             borderColor: '#0B0F19',
@@ -101,5 +100,5 @@ export function DashboardCategoryChart({ dateRange = '7d' }: DashboardCategoryCh
     );
   }
 
-  return <BaseEchart option={option} height={360} />;
+  return <BaseEchart option={option} height={340} />;
 }

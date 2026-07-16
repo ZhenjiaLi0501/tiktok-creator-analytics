@@ -41,8 +41,10 @@ export function DashboardPageContent() {
       />
       <DashboardOverviewSection dateRange={dateRange} />
       <DashboardTrendSection dateRange={dateRange} />
-      <DashboardCategorySection dateRange={dateRange} />
-      <DashboardPublishTrendSection dateRange={dateRange} />
+      <div className="grid gap-8 xl:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+        <DashboardCategorySection dateRange={dateRange} />
+        <DashboardPublishTrendSection dateRange={dateRange} />
+      </div>
     </div>
   );
 }

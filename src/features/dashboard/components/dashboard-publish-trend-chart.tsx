@@ -126,5 +126,5 @@ export function DashboardPublishTrendChart({ dateRange = '7d' }: DashboardPublis
     );
   }
 
-  return <BaseEchart option={option} height={360} />;
+  return <BaseEchart option={option} height={340} />;
 }
