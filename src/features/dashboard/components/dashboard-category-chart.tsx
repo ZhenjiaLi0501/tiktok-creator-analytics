@@ -7,6 +7,7 @@ import { ErrorState } from '@/components/common/error-state';
 import { LoadingState } from '@/components/common/loading-state';
 import { getDashboardCategory } from '@/services/dashboard';
 import type { DashboardCategoryItem, DashboardDateRange } from '@/types/dashboard';
+import { chartColorPalette, createItemTooltip } from '@/components/charts/chart-theme';
 
 type DashboardCategoryChartProps = {
   dateRange: DashboardDateRange;
@@ -39,9 +40,9 @@ export function DashboardCategoryChart({ dateRange = '7d' }: DashboardCategoryCh
   const option = useMemo<EChartsOption>(() => {
     return {
       backgroundColor: 'transparent',
-      color: ['#FE2C55', '#00F2EA', '#8B5CF6', '#F97316', '#22C55E', '#38BDF8'],
+      color: chartColorPalette,
       tooltip: {
-        trigger: 'item',
+        ...createItemTooltip(),
         formatter: '{b}<br/>视频数：{c}<br/>占比：{d}%',
       },
       legend: {

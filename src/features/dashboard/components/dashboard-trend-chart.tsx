@@ -7,6 +7,14 @@ import { ErrorState } from '@/components/common/error-state';
 import { LoadingState } from '@/components/common/loading-state';
 import { getDashboardTrend } from '@/services/dashboard';
 import type { DashboardDateRange, DashboardTrendPoint } from '@/types/dashboard';
+import {
+  chartColorPalette,
+  createBaseGrid,
+  createBaseLegend,
+  createBaseTooltip,
+  createCategoryXAxis,
+  createValueYAxis,
+} from '@/components/charts/chart-theme';
 
 type DashboardTrendChartProps = {
   dateRange: DashboardDateRange;
@@ -40,53 +48,23 @@ export function DashboardTrendChart({ dateRange = '7d' }: DashboardTrendChartPro
   const option = useMemo<EChartsOption>(() => {
     return {
       backgroundColor: 'transparent',
-      color: ['#FE2C55', '#00F2EA', '#8B5CF6'],
-      tooltip: {
-        trigger: 'axis',
-      },
+      color: chartColorPalette,
+      tooltip: createBaseTooltip(),
       legend: {
-        top: 0,
-        textStyle: {
-          color: '#94A3B8',
+        ...createBaseLegend(),
+        selected: {
+          播放量: true,
+          点赞量: true,
+          评论量: true,
+          转发量: false,
         },
       },
-      grid: {
-        top: 48,
-        left: 24,
-        right: 24,
-        bottom: 24,
-        containLabel: true,
-      },
+      grid: createBaseGrid(),
       xAxis: {
-        type: 'category',
+        ...createCategoryXAxis(data.map((item) => item.date)),
         boundaryGap: false,
-        data: data.map((item) => item.date),
-        axisLine: {
-          lineStyle: {
-            color: 'rgba(148,163,184,0.3)',
-          },
-        },
-        axisLabel: {
-          color: '#94A3B8',
-        },
       },
-      yAxis: {
-        type: 'value',
-        axisLabel: {
-          color: '#94A3B8',
-          formatter: (value: number) => {
-            if (value >= 10000) {
-              return `${Math.round(value / 10000)}w`;
-            }
-            return String(value);
-          },
-        },
-        splitLine: {
-          lineStyle: {
-            color: 'rgba(148,163,184,0.12)',
-          },
-        },
-      },
+      yAxis: createValueYAxis(),
       series: [
         {
           name: '播放量',

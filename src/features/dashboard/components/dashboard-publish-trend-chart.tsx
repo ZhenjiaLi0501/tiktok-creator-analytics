@@ -8,6 +8,14 @@ import { ErrorState } from '@/components/common/error-state';
 import { LoadingState } from '@/components/common/loading-state';
 import { getDashboardPublishTrend } from '@/services/dashboard';
 import type { DashboardDateRange, DashboardPublishTrendPoint } from '@/types/dashboard';
+import {
+  chartColors,
+  createBaseGrid,
+  createBaseLegend,
+  createBaseTooltip,
+  createCategoryXAxis,
+  createValueYAxis,
+} from '@/components/charts/chart-theme';
 
 type DashboardPublishTrendChartProps = {
   dateRange?: DashboardDateRange;
@@ -43,53 +51,12 @@ export function DashboardPublishTrendChart({ dateRange = '7d' }: DashboardPublis
   const option = useMemo<EChartsOption>(() => {
     return {
       backgroundColor: 'transparent',
-      color: ['#FE2C55', '#00F2EA'],
-      tooltip: {
-        trigger: 'axis',
-      },
-      legend: {
-        top: 0,
-        textStyle: {
-          color: '#94A3B8',
-        },
-      },
-      grid: {
-        top: 48,
-        left: 24,
-        right: 24,
-        bottom: 24,
-        containLabel: true,
-      },
-      xAxis: {
-        type: 'category',
-        data: data.map((item) => item.date),
-        axisLine: {
-          lineStyle: {
-            color: 'rgba(148, 163, 184, 0.3)',
-          },
-        },
-        axisLabel: {
-          color: '#94A3B8',
-        },
-      },
-      yAxis: {
-        type: 'value',
-        axisLabel: {
-          color: '#94A3B8',
-          formatter: (value: number) => {
-            if (value >= 10000) {
-              return `${Math.round(value / 10000)}w`;
-            }
-
-            return String(value);
-          },
-        },
-        splitLine: {
-          lineStyle: {
-            color: 'rgba(148, 163, 184, 0.12)',
-          },
-        },
-      },
+      color: [chartColors.red, chartColors.cyan],
+      tooltip: createBaseTooltip(),
+      legend: createBaseLegend(),
+      grid: createBaseGrid(),
+      xAxis: createCategoryXAxis(data.map((item) => item.date)),
+      yAxis: createValueYAxis(),
       series: [
         {
           name: '发布视频数',
