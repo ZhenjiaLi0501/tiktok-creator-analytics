@@ -43,6 +43,3 @@ next-env.d.ts
 # Raw datasets
 
 data/raw/
-
-# png files
-*.png
