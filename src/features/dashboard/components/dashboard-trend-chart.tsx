@@ -7,6 +7,7 @@ import { ErrorState } from '@/components/common/error-state';
 import { LoadingState } from '@/components/common/loading-state';
 import { getDashboardTrend } from '@/services/dashboard';
 import type { DashboardDateRange, DashboardTrendPoint } from '@/types/dashboard';
+import { createAxisTooltipFormatter } from '@/components/charts/chart-tooltip';
 import {
   chartColorPalette,
   createBaseGrid,
@@ -49,7 +50,7 @@ export function DashboardTrendChart({ dateRange = '7d' }: DashboardTrendChartPro
     return {
       backgroundColor: 'transparent',
       color: chartColorPalette,
-      tooltip: createBaseTooltip(),
+      tooltip: createBaseTooltip(createAxisTooltipFormatter()),
       legend: {
         ...createBaseLegend(),
         selected: {

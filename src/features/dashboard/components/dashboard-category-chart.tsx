@@ -8,6 +8,7 @@ import { LoadingState } from '@/components/common/loading-state';
 import { getDashboardCategory } from '@/services/dashboard';
 import type { DashboardCategoryItem, DashboardDateRange } from '@/types/dashboard';
 import { chartColorPalette, createItemTooltip } from '@/components/charts/chart-theme';
+import { createPieTooltipFormatter } from '@/components/charts/chart-tooltip';
 
 type DashboardCategoryChartProps = {
   dateRange: DashboardDateRange;
@@ -41,10 +42,17 @@ export function DashboardCategoryChart({ dateRange = '7d' }: DashboardCategoryCh
     return {
       backgroundColor: 'transparent',
       color: chartColorPalette,
-      tooltip: {
-        ...createItemTooltip(),
-        formatter: '{b}<br/>视频数：{c}<br/>占比：{d}%',
-      },
+      tooltip: createItemTooltip(
+        createPieTooltipFormatter({
+          valueLabel: '视频数',
+          extraFields: [
+            {
+              key: 'playCount',
+              label: '播放量',
+            },
+          ],
+        }),
+      ),
       legend: {
         bottom: 0,
         left: 'center',
@@ -75,6 +83,7 @@ export function DashboardCategoryChart({ dateRange = '7d' }: DashboardCategoryCh
           data: data.map((item) => ({
             name: item.category,
             value: item.videoCount,
+            playCount: item.playCount,
           })),
         },
       ],

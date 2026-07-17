@@ -8,6 +8,7 @@ import { ErrorState } from '@/components/common/error-state';
 import { LoadingState } from '@/components/common/loading-state';
 import { getDashboardPublishTrend } from '@/services/dashboard';
 import type { DashboardDateRange, DashboardPublishTrendPoint } from '@/types/dashboard';
+import { createAxisTooltipFormatter } from '@/components/charts/chart-tooltip';
 import {
   chartColors,
   createBaseGrid,
@@ -52,7 +53,7 @@ export function DashboardPublishTrendChart({ dateRange = '7d' }: DashboardPublis
     return {
       backgroundColor: 'transparent',
       color: [chartColors.red, chartColors.cyan],
-      tooltip: createBaseTooltip(),
+      tooltip: createBaseTooltip(createAxisTooltipFormatter()),
       legend: createBaseLegend(),
       grid: createBaseGrid(),
       xAxis: createCategoryXAxis(data.map((item) => item.date)),

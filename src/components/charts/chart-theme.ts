@@ -1,5 +1,6 @@
 import type { EChartsOption } from 'echarts';
 import { formatCompactNumber } from '@/lib/format';
+import type { ChartTooltipFormatter } from './chart-tooltip';
 
 export const chartColors = {
   red: '#FE2C55',
@@ -19,7 +20,7 @@ export const chartColorPalette = [
   chartColors.blue,
 ];
 
-export function createBaseTooltip(): EChartsOption['tooltip'] {
+export function createBaseTooltip(formatter?: ChartTooltipFormatter): EChartsOption['tooltip'] {
   return {
     trigger: 'axis',
     backgroundColor: 'rgba(15,23,42,0.95)',
@@ -27,10 +28,11 @@ export function createBaseTooltip(): EChartsOption['tooltip'] {
     textStyle: {
       color: '#E2E8F0',
     },
+    formatter,
   };
 }
 
-export function createItemTooltip(): EChartsOption['tooltip'] {
+export function createItemTooltip(formatter?: ChartTooltipFormatter): EChartsOption['tooltip'] {
   return {
     trigger: 'item',
     backgroundColor: 'rgba(15,23,42,0.95)',
@@ -38,6 +40,7 @@ export function createItemTooltip(): EChartsOption['tooltip'] {
     textStyle: {
       color: '#E2E8F0',
     },
+    formatter,
   };
 }
 
