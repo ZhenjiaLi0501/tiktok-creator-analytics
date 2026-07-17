@@ -6,6 +6,7 @@ import type { EChartsOption } from 'echarts';
 import { BaseEchart } from '@/components/charts/base-echart';
 import { ErrorState } from '@/components/common/error-state';
 import { LoadingState } from '@/components/common/loading-state';
+import { EmptyState } from '@/components/common/empty-state';
 import { getDashboardPublishTrend } from '@/services/dashboard';
 import type { DashboardDateRange, DashboardPublishTrendPoint } from '@/types/dashboard';
 import { createAxisTooltipFormatter } from '@/components/charts/chart-tooltip';
@@ -91,6 +92,11 @@ export function DashboardPublishTrendChart({ dateRange = '7d' }: DashboardPublis
   if (isLoading) {
     return (
       <LoadingState title="发布趋势加载中" description="正在获取抖音视频发布趋势数据。" rows={2} />
+    );
+  }
+  if (data.length === 0) {
+    return (
+      <EmptyState title="暂无发布趋势数据" description="当前时间范围内没有可用的发布趋势数据。" />
     );
   }
 

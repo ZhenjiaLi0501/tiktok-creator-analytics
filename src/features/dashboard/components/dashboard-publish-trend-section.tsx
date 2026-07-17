@@ -12,7 +12,7 @@ export function DashboardPublishTrendSection({ dateRange }: DashboardPublishTren
   return (
     <SectionCard
       title="视频发布趋势"
-      description="展示抖音平台视频发布量与活跃创作者数量的变化趋势。"
+      description="基于热门视频样本的 publish_time 统计视频发布时间分布与创作者活跃度。"
     >
       <div className="space-y-6">
         <DashboardPublishTrendChart dateRange={dateRange} />

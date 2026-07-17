@@ -1,0 +1,385 @@
+{
+  "today": [
+    {
+      "date": "00:00",
+      "publishedVideos": 7,
+      "activeCreators": 7
+    },
+    {
+      "date": "01:00",
+      "publishedVideos": 8,
+      "activeCreators": 8
+    },
+    {
+      "date": "02:00",
+      "publishedVideos": 6,
+      "activeCreators": 6
+    },
+    {
+      "date": "03:00",
+      "publishedVideos": 7,
+      "activeCreators": 7
+    },
+    {
+      "date": "04:00",
+      "publishedVideos": 3,
+      "activeCreators": 3
+    },
+    {
+      "date": "05:00",
+      "publishedVideos": 10,
+      "activeCreators": 10
+    },
+    {
+      "date": "06:00",
+      "publishedVideos": 4,
+      "activeCreators": 4
+    },
+    {
+      "date": "07:00",
+      "publishedVideos": 3,
+      "activeCreators": 3
+    },
+    {
+      "date": "08:00",
+      "publishedVideos": 6,
+      "activeCreators": 6
+    },
+    {
+      "date": "09:00",
+      "publishedVideos": 5,
+      "activeCreators": 5
+    },
+    {
+      "date": "10:00",
+      "publishedVideos": 2,
+      "activeCreators": 2
+    },
+    {
+      "date": "11:00",
+      "publishedVideos": 5,
+      "activeCreators": 5
+    },
+    {
+      "date": "12:00",
+      "publishedVideos": 6,
+      "activeCreators": 6
+    },
+    {
+      "date": "13:00",
+      "publishedVideos": 4,
+      "activeCreators": 4
+    },
+    {
+      "date": "14:00",
+      "publishedVideos": 18,
+      "activeCreators": 18
+    },
+    {
+      "date": "15:00",
+      "publishedVideos": 17,
+      "activeCreators": 17
+    },
+    {
+      "date": "16:00",
+      "publishedVideos": 12,
+      "activeCreators": 12
+    },
+    {
+      "date": "17:00",
+      "publishedVideos": 20,
+      "activeCreators": 20
+    },
+    {
+      "date": "18:00",
+      "publishedVideos": 11,
+      "activeCreators": 11
+    },
+    {
+      "date": "19:00",
+      "publishedVideos": 4,
+      "activeCreators": 4
+    },
+    {
+      "date": "20:00",
+      "publishedVideos": 13,
+      "activeCreators": 13
+    },
+    {
+      "date": "21:00",
+      "publishedVideos": 14,
+      "activeCreators": 14
+    },
+    {
+      "date": "22:00",
+      "publishedVideos": 11,
+      "activeCreators": 11
+    },
+    {
+      "date": "23:00",
+      "publishedVideos": 4,
+      "activeCreators": 4
+    }
+  ],
+  "7d": [
+    {
+      "date": "01-23",
+      "publishedVideos": 42,
+      "activeCreators": 41
+    },
+    {
+      "date": "01-24",
+      "publishedVideos": 53,
+      "activeCreators": 52
+    },
+    {
+      "date": "01-25",
+      "publishedVideos": 41,
+      "activeCreators": 41
+    },
+    {
+      "date": "01-26",
+      "publishedVideos": 50,
+      "activeCreators": 49
+    },
+    {
+      "date": "01-27",
+      "publishedVideos": 19,
+      "activeCreators": 19
+    },
+    {
+      "date": "01-28",
+      "publishedVideos": 17,
+      "activeCreators": 17
+    },
+    {
+      "date": "01-29",
+      "publishedVideos": 40,
+      "activeCreators": 39
+    }
+  ],
+  "30d": [
+    {
+      "date": "12-31",
+      "publishedVideos": 13,
+      "activeCreators": 13
+    },
+    {
+      "date": "01-01",
+      "publishedVideos": 29,
+      "activeCreators": 29
+    },
+    {
+      "date": "01-02",
+      "publishedVideos": 37,
+      "activeCreators": 37
+    },
+    {
+      "date": "01-03",
+      "publishedVideos": 41,
+      "activeCreators": 40
+    },
+    {
+      "date": "01-04",
+      "publishedVideos": 38,
+      "activeCreators": 38
+    },
+    {
+      "date": "01-05",
+      "publishedVideos": 43,
+      "activeCreators": 43
+    },
+    {
+      "date": "01-06",
+      "publishedVideos": 25,
+      "activeCreators": 25
+    },
+    {
+      "date": "01-07",
+      "publishedVideos": 21,
+      "activeCreators": 21
+    },
+    {
+      "date": "01-08",
+      "publishedVideos": 40,
+      "activeCreators": 39
+    },
+    {
+      "date": "01-09",
+      "publishedVideos": 43,
+      "activeCreators": 43
+    },
+    {
+      "date": "01-10",
+      "publishedVideos": 44,
+      "activeCreators": 44
+    },
+    {
+      "date": "01-11",
+      "publishedVideos": 52,
+      "activeCreators": 50
+    },
+    {
+      "date": "01-12",
+      "publishedVideos": 57,
+      "activeCreators": 57
+    },
+    {
+      "date": "01-13",
+      "publishedVideos": 30,
+      "activeCreators": 30
+    },
+    {
+      "date": "01-14",
+      "publishedVideos": 24,
+      "activeCreators": 24
+    },
+    {
+      "date": "01-15",
+      "publishedVideos": 32,
+      "activeCreators": 32
+    },
+    {
+      "date": "01-16",
+      "publishedVideos": 59,
+      "activeCreators": 58
+    },
+    {
+      "date": "01-17",
+      "publishedVideos": 50,
+      "activeCreators": 50
+    },
+    {
+      "date": "01-18",
+      "publishedVideos": 52,
+      "activeCreators": 52
+    },
+    {
+      "date": "01-19",
+      "publishedVideos": 45,
+      "activeCreators": 43
+    },
+    {
+      "date": "01-20",
+      "publishedVideos": 28,
+      "activeCreators": 27
+    },
+    {
+      "date": "01-21",
+      "publishedVideos": 20,
+      "activeCreators": 19
+    },
+    {
+      "date": "01-22",
+      "publishedVideos": 41,
+      "activeCreators": 40
+    },
+    {
+      "date": "01-23",
+      "publishedVideos": 43,
+      "activeCreators": 41
+    },
+    {
+      "date": "01-24",
+      "publishedVideos": 53,
+      "activeCreators": 52
+    },
+    {
+      "date": "01-25",
+      "publishedVideos": 41,
+      "activeCreators": 41
+    },
+    {
+      "date": "01-26",
+      "publishedVideos": 50,
+      "activeCreators": 49
+    },
+    {
+      "date": "01-27",
+      "publishedVideos": 19,
+      "activeCreators": 19
+    },
+    {
+      "date": "01-28",
+      "publishedVideos": 17,
+      "activeCreators": 17
+    },
+    {
+      "date": "01-29",
+      "publishedVideos": 40,
+      "activeCreators": 39
+    }
+  ],
+  "custom": [
+    {
+      "date": "01-16",
+      "publishedVideos": 59,
+      "activeCreators": 58
+    },
+    {
+      "date": "01-17",
+      "publishedVideos": 50,
+      "activeCreators": 50
+    },
+    {
+      "date": "01-18",
+      "publishedVideos": 52,
+      "activeCreators": 52
+    },
+    {
+      "date": "01-19",
+      "publishedVideos": 45,
+      "activeCreators": 43
+    },
+    {
+      "date": "01-20",
+      "publishedVideos": 28,
+      "activeCreators": 27
+    },
+    {
+      "date": "01-21",
+      "publishedVideos": 20,
+      "activeCreators": 19
+    },
+    {
+      "date": "01-22",
+      "publishedVideos": 41,
+      "activeCreators": 40
+    },
+    {
+      "date": "01-23",
+      "publishedVideos": 43,
+      "activeCreators": 41
+    },
+    {
+      "date": "01-24",
+      "publishedVideos": 53,
+      "activeCreators": 52
+    },
+    {
+      "date": "01-25",
+      "publishedVideos": 41,
+      "activeCreators": 41
+    },
+    {
+      "date": "01-26",
+      "publishedVideos": 50,
+      "activeCreators": 49
+    },
+    {
+      "date": "01-27",
+      "publishedVideos": 19,
+      "activeCreators": 19
+    },
+    {
+      "date": "01-28",
+      "publishedVideos": 17,
+      "activeCreators": 17
+    },
+    {
+      "date": "01-29",
+      "publishedVideos": 40,
+      "activeCreators": 39
+    }
+  ]
+}

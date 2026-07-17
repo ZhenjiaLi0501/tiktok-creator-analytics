@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 import type { EChartsOption } from 'echarts';
 import { BaseEchart } from '@/components/charts/base-echart';
 import { ErrorState } from '@/components/common/error-state';
+import { EmptyState } from '@/components/common/empty-state';
 import { LoadingState } from '@/components/common/loading-state';
 import { getDashboardTrend } from '@/services/dashboard';
 import type { DashboardDateRange, DashboardTrendPoint } from '@/types/dashboard';
@@ -109,6 +110,9 @@ export function DashboardTrendChart({ dateRange = '7d' }: DashboardTrendChartPro
         rows={2}
       />
     );
+  }
+  if (data.length === 0) {
+    return <EmptyState title="暂无趋势数据" description="当前时间范围内没有可用的趋势数据。" />;
   }
   return <BaseEchart option={option} height={360} />;
 }

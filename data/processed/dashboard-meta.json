@@ -1,0 +1,7 @@
+{
+  "source": "Kaggle YouTube Trending Video Statistics",
+  "region": "US",
+  "demoTodayDate": "2018-01-30",
+  "generatedAt": "2026-07-17T06:38:20.768Z",
+  "note": "This dataset is transformed into mock data for a Douyin creator analytics dashboard. The today range uses a dense sample date with enough historical window and aggregates trend data by publish hour."
+}

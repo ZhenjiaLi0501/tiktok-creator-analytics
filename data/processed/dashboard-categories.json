@@ -1,0 +1,202 @@
+{
+  "today": [
+    {
+      "category": "娱乐",
+      "videoCount": 42,
+      "playCount": 41720260,
+      "percentage": 21
+    },
+    {
+      "category": "音乐",
+      "videoCount": 38,
+      "playCount": 86182601,
+      "percentage": 19
+    },
+    {
+      "category": "教程时尚",
+      "videoCount": 18,
+      "playCount": 15871842,
+      "percentage": 9
+    },
+    {
+      "category": "生活",
+      "videoCount": 17,
+      "playCount": 13853591,
+      "percentage": 8.5
+    },
+    {
+      "category": "新闻",
+      "videoCount": 14,
+      "playCount": 3128375,
+      "percentage": 7
+    },
+    {
+      "category": "体育",
+      "videoCount": 13,
+      "playCount": 40782571,
+      "percentage": 6.5
+    },
+    {
+      "category": "喜剧",
+      "videoCount": 12,
+      "playCount": 17287107,
+      "percentage": 6
+    },
+    {
+      "category": "影视动漫",
+      "videoCount": 10,
+      "playCount": 17111011,
+      "percentage": 5
+    }
+  ],
+  "7d": [
+    {
+      "category": "娱乐",
+      "videoCount": 102,
+      "playCount": 100489765,
+      "percentage": 22
+    },
+    {
+      "category": "音乐",
+      "videoCount": 67,
+      "playCount": 160225813,
+      "percentage": 14.4
+    },
+    {
+      "category": "新闻",
+      "videoCount": 49,
+      "playCount": 17953140,
+      "percentage": 10.6
+    },
+    {
+      "category": "教程时尚",
+      "videoCount": 41,
+      "playCount": 26954422,
+      "percentage": 8.8
+    },
+    {
+      "category": "体育",
+      "videoCount": 38,
+      "playCount": 53532524,
+      "percentage": 8.2
+    },
+    {
+      "category": "生活",
+      "videoCount": 34,
+      "playCount": 34804829,
+      "percentage": 7.3
+    },
+    {
+      "category": "喜剧",
+      "videoCount": 31,
+      "playCount": 46350202,
+      "percentage": 6.7
+    },
+    {
+      "category": "科技",
+      "videoCount": 24,
+      "playCount": 8347116,
+      "percentage": 5.2
+    }
+  ],
+  "30d": [
+    {
+      "category": "娱乐",
+      "videoCount": 325,
+      "playCount": 325932234,
+      "percentage": 22.6
+    },
+    {
+      "category": "音乐",
+      "videoCount": 167,
+      "playCount": 563709853,
+      "percentage": 11.6
+    },
+    {
+      "category": "新闻",
+      "videoCount": 143,
+      "playCount": 44491854,
+      "percentage": 9.9
+    },
+    {
+      "category": "教程时尚",
+      "videoCount": 134,
+      "playCount": 80595169,
+      "percentage": 9.3
+    },
+    {
+      "category": "生活",
+      "videoCount": 109,
+      "playCount": 92808060,
+      "percentage": 7.6
+    },
+    {
+      "category": "喜剧",
+      "videoCount": 108,
+      "playCount": 142649444,
+      "percentage": 7.5
+    },
+    {
+      "category": "体育",
+      "videoCount": 97,
+      "playCount": 94591151,
+      "percentage": 6.7
+    },
+    {
+      "category": "科技",
+      "videoCount": 90,
+      "playCount": 43202099,
+      "percentage": 6.3
+    }
+  ],
+  "custom": [
+    {
+      "category": "娱乐",
+      "videoCount": 174,
+      "playCount": 152360069,
+      "percentage": 22.8
+    },
+    {
+      "category": "音乐",
+      "videoCount": 97,
+      "playCount": 261627334,
+      "percentage": 12.7
+    },
+    {
+      "category": "新闻",
+      "videoCount": 83,
+      "playCount": 27483020,
+      "percentage": 10.9
+    },
+    {
+      "category": "教程时尚",
+      "videoCount": 74,
+      "playCount": 38527923,
+      "percentage": 9.7
+    },
+    {
+      "category": "生活",
+      "videoCount": 55,
+      "playCount": 50214894,
+      "percentage": 7.2
+    },
+    {
+      "category": "体育",
+      "videoCount": 55,
+      "playCount": 62145397,
+      "percentage": 7.2
+    },
+    {
+      "category": "喜剧",
+      "videoCount": 54,
+      "playCount": 66143466,
+      "percentage": 7.1
+    },
+    {
+      "category": "影视动漫",
+      "videoCount": 41,
+      "playCount": 66900703,
+      "percentage": 5.4
+    }
+  ]
+}

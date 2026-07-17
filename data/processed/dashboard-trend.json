@@ -1,0 +1,685 @@
+{
+  "today": [
+    {
+      "date": "00:00",
+      "playCount": 6359768,
+      "likeCount": 178084,
+      "commentCount": 16338,
+      "shareCount": 29163,
+      "activeCreators": 7,
+      "publishedVideos": 7
+    },
+    {
+      "date": "01:00",
+      "playCount": 5971956,
+      "likeCount": 222360,
+      "commentCount": 21186,
+      "shareCount": 36532,
+      "activeCreators": 8,
+      "publishedVideos": 8
+    },
+    {
+      "date": "02:00",
+      "playCount": 12075500,
+      "likeCount": 338575,
+      "commentCount": 68731,
+      "shareCount": 61096,
+      "activeCreators": 6,
+      "publishedVideos": 6
+    },
+    {
+      "date": "03:00",
+      "playCount": 12422224,
+      "likeCount": 228267,
+      "commentCount": 34733,
+      "shareCount": 39450,
+      "activeCreators": 7,
+      "publishedVideos": 7
+    },
+    {
+      "date": "04:00",
+      "playCount": 1557661,
+      "likeCount": 18013,
+      "commentCount": 5085,
+      "shareCount": 3465,
+      "activeCreators": 3,
+      "publishedVideos": 3
+    },
+    {
+      "date": "05:00",
+      "playCount": 9325287,
+      "likeCount": 745806,
+      "commentCount": 71938,
+      "shareCount": 122661,
+      "activeCreators": 10,
+      "publishedVideos": 10
+    },
+    {
+      "date": "06:00",
+      "playCount": 5515947,
+      "likeCount": 64017,
+      "commentCount": 15490,
+      "shareCount": 11926,
+      "activeCreators": 4,
+      "publishedVideos": 4
+    },
+    {
+      "date": "07:00",
+      "playCount": 1357658,
+      "likeCount": 23489,
+      "commentCount": 3833,
+      "shareCount": 4098,
+      "activeCreators": 3,
+      "publishedVideos": 3
+    },
+    {
+      "date": "08:00",
+      "playCount": 5580263,
+      "likeCount": 193474,
+      "commentCount": 9686,
+      "shareCount": 30474,
+      "activeCreators": 6,
+      "publishedVideos": 6
+    },
+    {
+      "date": "09:00",
+      "playCount": 12166115,
+      "likeCount": 664294,
+      "commentCount": 67909,
+      "shareCount": 109831,
+      "activeCreators": 5,
+      "publishedVideos": 5
+    },
+    {
+      "date": "10:00",
+      "playCount": 2630572,
+      "likeCount": 46922,
+      "commentCount": 12307,
+      "shareCount": 8885,
+      "activeCreators": 2,
+      "publishedVideos": 2
+    },
+    {
+      "date": "11:00",
+      "playCount": 5350299,
+      "likeCount": 177878,
+      "commentCount": 18953,
+      "shareCount": 29525,
+      "activeCreators": 5,
+      "publishedVideos": 5
+    },
+    {
+      "date": "12:00",
+      "playCount": 4905021,
+      "likeCount": 134718,
+      "commentCount": 11591,
+      "shareCount": 21946,
+      "activeCreators": 6,
+      "publishedVideos": 6
+    },
+    {
+      "date": "13:00",
+      "playCount": 5691089,
+      "likeCount": 63439,
+      "commentCount": 18122,
+      "shareCount": 12234,
+      "activeCreators": 4,
+      "publishedVideos": 4
+    },
+    {
+      "date": "14:00",
+      "playCount": 45914319,
+      "likeCount": 1673180,
+      "commentCount": 167760,
+      "shareCount": 276143,
+      "activeCreators": 18,
+      "publishedVideos": 18
+    },
+    {
+      "date": "15:00",
+      "playCount": 15778138,
+      "likeCount": 241802,
+      "commentCount": 32098,
+      "shareCount": 41085,
+      "activeCreators": 17,
+      "publishedVideos": 17
+    },
+    {
+      "date": "16:00",
+      "playCount": 4154856,
+      "likeCount": 153858,
+      "commentCount": 36919,
+      "shareCount": 28617,
+      "activeCreators": 12,
+      "publishedVideos": 12
+    },
+    {
+      "date": "17:00",
+      "playCount": 24088955,
+      "likeCount": 724016,
+      "commentCount": 94932,
+      "shareCount": 122842,
+      "activeCreators": 20,
+      "publishedVideos": 20
+    },
+    {
+      "date": "18:00",
+      "playCount": 35742207,
+      "likeCount": 2496243,
+      "commentCount": 680964,
+      "shareCount": 476581,
+      "activeCreators": 11,
+      "publishedVideos": 11
+    },
+    {
+      "date": "19:00",
+      "playCount": 4551743,
+      "likeCount": 104110,
+      "commentCount": 6820,
+      "shareCount": 16639,
+      "activeCreators": 4,
+      "publishedVideos": 4
+    },
+    {
+      "date": "20:00",
+      "playCount": 7706088,
+      "likeCount": 335333,
+      "commentCount": 43504,
+      "shareCount": 56828,
+      "activeCreators": 13,
+      "publishedVideos": 13
+    },
+    {
+      "date": "21:00",
+      "playCount": 9314729,
+      "likeCount": 144623,
+      "commentCount": 14390,
+      "shareCount": 23852,
+      "activeCreators": 14,
+      "publishedVideos": 14
+    },
+    {
+      "date": "22:00",
+      "playCount": 33520368,
+      "likeCount": 1244065,
+      "commentCount": 71603,
+      "shareCount": 197349,
+      "activeCreators": 11,
+      "publishedVideos": 11
+    },
+    {
+      "date": "23:00",
+      "playCount": 2272856,
+      "likeCount": 159738,
+      "commentCount": 8059,
+      "shareCount": 25170,
+      "activeCreators": 4,
+      "publishedVideos": 4
+    }
+  ],
+  "7d": [
+    {
+      "date": "01-24",
+      "playCount": 236075723,
+      "likeCount": 9578211,
+      "commentCount": 1169564,
+      "shareCount": 1612172,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-25",
+      "playCount": 263220554,
+      "likeCount": 10824790,
+      "commentCount": 1425648,
+      "shareCount": 1837568,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-26",
+      "playCount": 203842366,
+      "likeCount": 9103029,
+      "commentCount": 1430943,
+      "shareCount": 1580102,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-27",
+      "playCount": 204888647,
+      "likeCount": 9570872,
+      "commentCount": 1494632,
+      "shareCount": 1659834,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-28",
+      "playCount": 230851421,
+      "likeCount": 10537865,
+      "commentCount": 1562711,
+      "shareCount": 1815095,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-29",
+      "playCount": 254819348,
+      "likeCount": 10856193,
+      "commentCount": 1582032,
+      "shareCount": 1865740,
+      "activeCreators": 199,
+      "publishedVideos": 199
+    },
+    {
+      "date": "01-30",
+      "playCount": 273953619,
+      "likeCount": 10376304,
+      "commentCount": 1532951,
+      "shareCount": 1786392,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    }
+  ],
+  "30d": [
+    {
+      "date": "12-30",
+      "playCount": 272059514,
+      "likeCount": 8975258,
+      "commentCount": 901405,
+      "shareCount": 1481509,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "12-31",
+      "playCount": 287060487,
+      "likeCount": 9827989,
+      "commentCount": 981777,
+      "shareCount": 1621461,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-01",
+      "playCount": 307958318,
+      "likeCount": 10198450,
+      "commentCount": 1019090,
+      "shareCount": 1682634,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-02",
+      "playCount": 320211642,
+      "likeCount": 10101930,
+      "commentCount": 1024877,
+      "shareCount": 1669028,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-03",
+      "playCount": 251099889,
+      "likeCount": 9252551,
+      "commentCount": 1613958,
+      "shareCount": 1629985,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-04",
+      "playCount": 239990961,
+      "likeCount": 9080765,
+      "commentCount": 1935435,
+      "shareCount": 1652437,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-05",
+      "playCount": 202066493,
+      "likeCount": 8489162,
+      "commentCount": 2019722,
+      "shareCount": 1576332,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-06",
+      "playCount": 208635326,
+      "likeCount": 8605177,
+      "commentCount": 1989389,
+      "shareCount": 1589185,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-07",
+      "playCount": 218772690,
+      "likeCount": 8453673,
+      "commentCount": 2067367,
+      "shareCount": 1578163,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-08",
+      "playCount": 231850086,
+      "likeCount": 8537317,
+      "commentCount": 2141899,
+      "shareCount": 1601884,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-09",
+      "playCount": 248347992,
+      "likeCount": 8772408,
+      "commentCount": 2226433,
+      "shareCount": 1649830,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-12",
+      "playCount": 200000937,
+      "likeCount": 6986911,
+      "commentCount": 747023,
+      "shareCount": 1160095,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-13",
+      "playCount": 139776028,
+      "likeCount": 5972728,
+      "commentCount": 671697,
+      "shareCount": 996664,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-14",
+      "playCount": 165774508,
+      "likeCount": 7022953,
+      "commentCount": 760748,
+      "shareCount": 1167562,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-15",
+      "playCount": 194580496,
+      "likeCount": 8012565,
+      "commentCount": 874141,
+      "shareCount": 1333007,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-16",
+      "playCount": 215509699,
+      "likeCount": 8427197,
+      "commentCount": 890672,
+      "shareCount": 1397683,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-17",
+      "playCount": 220096801,
+      "likeCount": 8113346,
+      "commentCount": 837366,
+      "shareCount": 1342614,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-18",
+      "playCount": 216173739,
+      "likeCount": 8553689,
+      "commentCount": 953823,
+      "shareCount": 1426124,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-19",
+      "playCount": 207910764,
+      "likeCount": 8401519,
+      "commentCount": 956114,
+      "shareCount": 1403651,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-20",
+      "playCount": 150079592,
+      "likeCount": 5995184,
+      "commentCount": 807529,
+      "shareCount": 1020410,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-21",
+      "playCount": 160575431,
+      "likeCount": 6488222,
+      "commentCount": 890260,
+      "shareCount": 1106778,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-22",
+      "playCount": 183528951,
+      "likeCount": 7244431,
+      "commentCount": 976723,
+      "shareCount": 1233174,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-23",
+      "playCount": 206291076,
+      "likeCount": 7897049,
+      "commentCount": 1018980,
+      "shareCount": 1337405,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-24",
+      "playCount": 236075723,
+      "likeCount": 9578211,
+      "commentCount": 1169564,
+      "shareCount": 1612172,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-25",
+      "playCount": 263220554,
+      "likeCount": 10824790,
+      "commentCount": 1425648,
+      "shareCount": 1837568,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-26",
+      "playCount": 203842366,
+      "likeCount": 9103029,
+      "commentCount": 1430943,
+      "shareCount": 1580102,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-27",
+      "playCount": 204888647,
+      "likeCount": 9570872,
+      "commentCount": 1494632,
+      "shareCount": 1659834,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-28",
+      "playCount": 230851421,
+      "likeCount": 10537865,
+      "commentCount": 1562711,
+      "shareCount": 1815095,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-29",
+      "playCount": 254819348,
+      "likeCount": 10856193,
+      "commentCount": 1582032,
+      "shareCount": 1865740,
+      "activeCreators": 199,
+      "publishedVideos": 199
+    },
+    {
+      "date": "01-30",
+      "playCount": 273953619,
+      "likeCount": 10376304,
+      "commentCount": 1532951,
+      "shareCount": 1786392,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    }
+  ],
+  "custom": [
+    {
+      "date": "01-17",
+      "playCount": 220096801,
+      "likeCount": 8113346,
+      "commentCount": 837366,
+      "shareCount": 1342614,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-18",
+      "playCount": 216173739,
+      "likeCount": 8553689,
+      "commentCount": 953823,
+      "shareCount": 1426124,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-19",
+      "playCount": 207910764,
+      "likeCount": 8401519,
+      "commentCount": 956114,
+      "shareCount": 1403651,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-20",
+      "playCount": 150079592,
+      "likeCount": 5995184,
+      "commentCount": 807529,
+      "shareCount": 1020410,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-21",
+      "playCount": 160575431,
+      "likeCount": 6488222,
+      "commentCount": 890260,
+      "shareCount": 1106778,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-22",
+      "playCount": 183528951,
+      "likeCount": 7244431,
+      "commentCount": 976723,
+      "shareCount": 1233174,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-23",
+      "playCount": 206291076,
+      "likeCount": 7897049,
+      "commentCount": 1018980,
+      "shareCount": 1337405,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-24",
+      "playCount": 236075723,
+      "likeCount": 9578211,
+      "commentCount": 1169564,
+      "shareCount": 1612172,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-25",
+      "playCount": 263220554,
+      "likeCount": 10824790,
+      "commentCount": 1425648,
+      "shareCount": 1837568,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-26",
+      "playCount": 203842366,
+      "likeCount": 9103029,
+      "commentCount": 1430943,
+      "shareCount": 1580102,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-27",
+      "playCount": 204888647,
+      "likeCount": 9570872,
+      "commentCount": 1494632,
+      "shareCount": 1659834,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-28",
+      "playCount": 230851421,
+      "likeCount": 10537865,
+      "commentCount": 1562711,
+      "shareCount": 1815095,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    },
+    {
+      "date": "01-29",
+      "playCount": 254819348,
+      "likeCount": 10856193,
+      "commentCount": 1582032,
+      "shareCount": 1865740,
+      "activeCreators": 199,
+      "publishedVideos": 199
+    },
+    {
+      "date": "01-30",
+      "playCount": 273953619,
+      "likeCount": 10376304,
+      "commentCount": 1532951,
+      "shareCount": 1786392,
+      "activeCreators": 200,
+      "publishedVideos": 200
+    }
+  ]
+}

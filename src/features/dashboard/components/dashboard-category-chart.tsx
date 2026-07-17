@@ -5,6 +5,7 @@ import type { EChartsOption } from 'echarts';
 import { BaseEchart } from '@/components/charts/base-echart';
 import { ErrorState } from '@/components/common/error-state';
 import { LoadingState } from '@/components/common/loading-state';
+import { EmptyState } from '@/components/common/empty-state';
 import { getDashboardCategory } from '@/services/dashboard';
 import type { DashboardCategoryItem, DashboardDateRange } from '@/types/dashboard';
 import { chartColorPalette, createItemTooltip } from '@/components/charts/chart-theme';
@@ -108,6 +109,9 @@ export function DashboardCategoryChart({ dateRange = '7d' }: DashboardCategoryCh
         errorMessage={errorMessage}
       />
     );
+  }
+  if (data.length === 0) {
+    return <EmptyState title="暂无分类数据" description="当前时间范围内没有可用的分类数据。" />;
   }
 
   return <BaseEchart option={option} height={340} />;

@@ -1,0 +1,46 @@
+{
+  "today": {
+    "totalCreators": 1694,
+    "activeCreators": 200,
+    "newCreators": 19,
+    "totalVideos": 200,
+    "totalPlayCount": 273953619,
+    "totalLikeCount": 10376304,
+    "totalCommentCount": 1532951,
+    "totalShareCount": 1786392,
+    "avgEngagementRate": 5
+  },
+  "7d": {
+    "totalCreators": 1694,
+    "activeCreators": 378,
+    "newCreators": 129,
+    "totalVideos": 464,
+    "totalPlayCount": 554905367,
+    "totalLikeCount": 20332771,
+    "totalCommentCount": 2705212,
+    "totalShareCount": 3455709,
+    "avgEngagementRate": 4.77
+  },
+  "30d": {
+    "totalCreators": 1694,
+    "activeCreators": 887,
+    "newCreators": 514,
+    "totalVideos": 1439,
+    "totalPlayCount": 1633749007,
+    "totalLikeCount": 55732503,
+    "totalCommentCount": 7699449,
+    "totalShareCount": 9514819,
+    "avgEngagementRate": 4.46
+  },
+  "custom": {
+    "totalCreators": 1694,
+    "activeCreators": 561,
+    "newCreators": 247,
+    "totalVideos": 764,
+    "totalPlayCount": 833768379,
+    "totalLikeCount": 30132338,
+    "totalCommentCount": 3731470,
+    "totalShareCount": 5079584,
+    "avgEngagementRate": 4.67
+  }
+}
