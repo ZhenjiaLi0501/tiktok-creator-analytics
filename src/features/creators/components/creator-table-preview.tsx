@@ -6,6 +6,7 @@ import { useMemo, useState } from 'react';
 import { Pagination } from '@/components/business/pagination';
 import { Button } from '@/components/ui/button';
 import { DetailDrawer } from '@/components/business/detail-drawer';
+import { formatCompactNumber, formatInteger, formatPercent } from '@/lib/format';
 
 type CreatorPreview = {
   id: string;
@@ -104,25 +105,25 @@ export function CreatorTablePreview() {
       key: 'fansCount',
       title: '粉丝数',
       align: 'right',
-      render: (row) => row.fansCount.toLocaleString(),
+      render: (row) => formatCompactNumber(row.fansCount),
     },
     {
       key: 'videoCount',
       title: '视频数',
       align: 'right',
-      render: (row) => row.videoCount.toLocaleString(),
+      render: (row) => formatInteger(row.videoCount),
     },
     {
       key: 'totalPlayCount',
       title: '总播放量',
       align: 'right',
-      render: (row) => row.totalPlayCount.toLocaleString(),
+      render: (row) => formatCompactNumber(row.totalPlayCount),
     },
     {
       key: 'engagementRate',
       title: '互动率',
       align: 'right',
-      render: (row) => `${row.engagementRate}%`,
+      render: (row) => formatPercent(row.engagementRate),
     },
     {
       key: 'status',

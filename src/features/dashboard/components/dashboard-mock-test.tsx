@@ -7,6 +7,7 @@ import { MetricCard } from '@/components/business/metric-card';
 import type { DashboardDateRange, PlatformOverview } from '@/types/dashboard';
 import { ErrorState } from '@/components/common/error-state';
 import { LoadingState } from '@/components/common/loading-state';
+import { formatCompactNumber, formatPercent, formatSignedPercent } from '@/lib/format';
 
 type DashboardMockTestProps = {
   dateRange?: DashboardDateRange;
@@ -59,29 +60,29 @@ export function DashboardMockTest({ dateRange = '7d' }: DashboardMockTestProps) 
     <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
       <MetricCard
         title="创作者总数"
-        value={data.totalCreators.toLocaleString()}
-        trend={{ value: '+12.5%', type: 'up' }}
+        value={formatCompactNumber(data.totalCreators)}
+        trend={{ value: formatSignedPercent(12.5), type: 'up' }}
         description="较上周增长"
       />
 
       <MetricCard
         title="活跃创作者"
-        value={data.activeCreators.toLocaleString()}
-        trend={{ value: '+8.3%', type: 'up' }}
+        value={formatCompactNumber(data.activeCreators)}
+        trend={{ value: formatSignedPercent(8.3), type: 'up' }}
         description="较上周增长"
       />
 
       <MetricCard
         title="视频总量"
-        value={data.totalVideos.toLocaleString()}
-        trend={{ value: '+5.2%', type: 'up' }}
+        value={formatCompactNumber(data.totalVideos)}
+        trend={{ value: formatSignedPercent(5.2), type: 'up' }}
         description="较上周增长"
       />
 
       <MetricCard
         title="平均互动率"
-        value={`${data.avgEngagementRate}%`}
-        trend={{ value: '+1.1%', type: 'up' }}
+        value={formatPercent(data.avgEngagementRate)}
+        trend={{ value: formatSignedPercent(1.1), type: 'up' }}
         description="较上周增长"
       />
     </div>

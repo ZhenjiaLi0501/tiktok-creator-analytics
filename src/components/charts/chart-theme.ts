@@ -1,4 +1,5 @@
 import type { EChartsOption } from 'echarts';
+import { formatCompactNumber } from '@/lib/format';
 
 export const chartColors = {
   red: '#FE2C55',
@@ -17,16 +18,6 @@ export const chartColorPalette = [
   chartColors.green,
   chartColors.blue,
 ];
-
-export function formatCompactNumber(value: number) {
-  if (value >= 100000000) {
-    return `${(value / 100000000).toFixed(1)}亿`;
-  }
-  if (value >= 10000) {
-    return `${(value / 10000).toFixed(1)}w`;
-  }
-  return value.toString();
-}
 
 export function createBaseTooltip(): EChartsOption['tooltip'] {
   return {
