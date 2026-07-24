@@ -2,7 +2,7 @@
 
 import { PageHeader } from '@/components/business/page-header';
 import { SectionCard } from '@/components/business/section-card';
-import { ContentEmptyState } from '@/features/content/components/content-empty-state';
+import { ContentPageContent } from '@/features/content/components/content-page-content';
 
 export default function ContentPage() {
   return (
@@ -16,7 +16,7 @@ export default function ContentPage() {
         title="视频内容列表"
         description="前阶段暂未接入内容列表数据，后续将通过 MSW Mock 接入十万级视频数据。"
       >
-        <ContentEmptyState />
+        <ContentPageContent />
       </SectionCard>
     </section>
   );

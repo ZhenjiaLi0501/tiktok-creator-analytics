@@ -5,3 +5,10 @@ export type ApiResponse<T> = {
   requestId: string;
   timestamp: number;
 };
+
+export type PageResponse<T> = {
+  list: T[];
+  total: number;
+  page: number;
+  pageSize: number;
+};
