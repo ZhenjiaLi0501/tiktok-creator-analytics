@@ -1,5 +1,6 @@
 'use client';
 
+import { markPerformance, measurePerformance, observeLongTasks } from '@/lib/performance';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { EmptyState } from '@/components/common/empty-state';
 import { ContentListSkeleton } from './content-list-skeleton';
@@ -136,16 +137,24 @@ export function ContentPageContent() {
     setErrorMessage('');
     setQuery(updater);
   }, []);
+  useEffect(() => {
+    return observeLongTasks();
+  }, []);
 
   useEffect(() => {
     let ignore = false;
-
+    markPerformance('content-list-request-start');
     getContentList(buildRequestQuery(query))
       .then((response) => {
         if (ignore) {
           return;
         }
-
+        markPerformance('content-list-data-ready');
+        measurePerformance(
+          'content-list request duration',
+          'content-list-request-start',
+          'content-list-data-ready',
+        );
         setItems(response.list);
         setTotal(response.total);
         setSelectedIds(new Set());
@@ -170,6 +179,37 @@ export function ContentPageContent() {
       ignore = true;
     };
   }, [buildRequestQuery, query]);
+
+  useEffect(() => {
+    if (loading || items.length === 0) {
+      return;
+    }
+    let firstFrame = 0;
+    let secondFrame = 0;
+    firstFrame = window.requestAnimationFrame(() => {
+      secondFrame = window.requestAnimationFrame(() => {
+        markPerformance('content-list-visible-rows-ready');
+
+        measurePerformance(
+          'content-list data ready to visible',
+          'content-list-request-start',
+          'content-list-visible-rows-ready',
+        );
+
+        measurePerformance(
+          'content-list data ready to visible rows',
+          'content-list-data-ready',
+          'content-list-visible-rows-ready',
+        );
+        const renderedRowCount = document.querySelectorAll('[data-content-row="true"]').length;
+        console.info(`[performance] rendered row count: ${renderedRowCount}`);
+      });
+    });
+    return () => {
+      window.cancelAnimationFrame(firstFrame);
+      window.cancelAnimationFrame(secondFrame);
+    };
+  }, [loading, items.length]);
 
   useEffect(() => {
     let ignore = false;

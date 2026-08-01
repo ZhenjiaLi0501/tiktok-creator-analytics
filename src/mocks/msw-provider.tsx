@@ -12,7 +12,12 @@ export function MswProvider({ children }: MswProviderProps) {
   useEffect(() => {
     let isMounted = true;
     async function enableMocking() {
-      if (process.env.NODE_ENV !== 'development') {
+      if (typeof window === 'undefined') {
+        return;
+      }
+      const shouldEnableMocking =
+        process.env.NODE_ENV === 'development' || process.env.NEXT_PUBLIC_API_MOCKING === 'enabled';
+      if (!shouldEnableMocking) {
         setIsReady(true);
         return;
       }
@@ -20,7 +25,12 @@ export function MswProvider({ children }: MswProviderProps) {
         const { worker } = await import('@/mocks/browser');
         await worker.start({
           onUnhandledRequest: 'bypass',
+          quiet: true,
+          serviceWorker: {
+            url: '/mockServiceWorker.js',
+          },
         });
+        console.log('MSW worker started');
       } catch (error) {
         console.error('Failed to start MSW worker:', error);
       } finally {

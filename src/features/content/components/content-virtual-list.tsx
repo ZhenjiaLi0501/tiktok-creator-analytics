@@ -70,6 +70,7 @@ const ContentRow = memo(function ContentRow({
     <div style={style} className="px-3">
       <button
         type="button"
+        data-content-row="true"
         onClick={() => data.onOpenDetail(item)}
         style={{ gridTemplateColumns: contentTableGridTemplate }}
         className={cn(
