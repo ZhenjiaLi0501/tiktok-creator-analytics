@@ -1,0 +1,1942 @@
+{
+  "GD": {
+    "regionId": "GD",
+    "regionName": "广东",
+    "city": "广州",
+    "audienceCount": 30316000,
+    "activeRate": 51.96,
+    "interactionRate": 4.17,
+    "topCategory": "娱乐",
+    "gender": [
+      {
+        "label": "女性",
+        "value": 50
+      },
+      {
+        "label": "男性",
+        "value": 47
+      },
+      {
+        "label": "未知",
+        "value": 3
+      }
+    ],
+    "age": [
+      {
+        "label": "18岁以下",
+        "value": 9.5
+      },
+      {
+        "label": "18-24岁",
+        "value": 30
+      },
+      {
+        "label": "25-30岁",
+        "value": 24.9
+      },
+      {
+        "label": "31-40岁",
+        "value": 23.2
+      },
+      {
+        "label": "41岁以上",
+        "value": 12.3
+      }
+    ],
+    "device": [
+      {
+        "label": "Android",
+        "value": 67.7
+      },
+      {
+        "label": "iOS",
+        "value": 28.2
+      },
+      {
+        "label": "Web",
+        "value": 2.7
+      },
+      {
+        "label": "Tablet",
+        "value": 1.5
+      }
+    ],
+    "keywords": [
+      {
+        "word": "城市漫游",
+        "value": 43
+      },
+      {
+        "word": "新闻",
+        "value": 77
+      },
+      {
+        "word": "非遗手作",
+        "value": 64
+      },
+      {
+        "word": "影视剪辑",
+        "value": 70
+      },
+      {
+        "word": "国风穿搭",
+        "value": 100
+      },
+      {
+        "word": "剧情反转",
+        "value": 62
+      },
+      {
+        "word": "热点事件",
+        "value": 121
+      },
+      {
+        "word": "美食探店",
+        "value": 70
+      }
+    ]
+  },
+  "JS": {
+    "regionId": "JS",
+    "regionName": "江苏",
+    "city": "南京",
+    "audienceCount": 24780000,
+    "activeRate": 41.43,
+    "interactionRate": 7.88,
+    "topCategory": "生活",
+    "gender": [
+      {
+        "label": "女性",
+        "value": 51.6
+      },
+      {
+        "label": "男性",
+        "value": 45.2
+      },
+      {
+        "label": "未知",
+        "value": 3.2
+      }
+    ],
+    "age": [
+      {
+        "label": "18岁以下",
+        "value": 8.9
+      },
+      {
+        "label": "18-24岁",
+        "value": 28
+      },
+      {
+        "label": "25-30岁",
+        "value": 26.8
+      },
+      {
+        "label": "31-40岁",
+        "value": 23.1
+      },
+      {
+        "label": "41岁以上",
+        "value": 13.2
+      }
+    ],
+    "device": [
+      {
+        "label": "Android",
+        "value": 68.5
+      },
+      {
+        "label": "iOS",
+        "value": 27
+      },
+      {
+        "label": "Web",
+        "value": 2.9
+      },
+      {
+        "label": "Tablet",
+        "value": 1.6
+      }
+    ],
+    "keywords": [
+      {
+        "word": "城市夜景",
+        "value": 37
+      },
+      {
+        "word": "旅行攻略",
+        "value": 69
+      },
+      {
+        "word": "美食探店",
+        "value": 129
+      },
+      {
+        "word": "城市漫游",
+        "value": 35
+      },
+      {
+        "word": "本地生活",
+        "value": 73
+      },
+      {
+        "word": "影视动漫",
+        "value": 28
+      },
+      {
+        "word": "体育",
+        "value": 39
+      },
+      {
+        "word": "音乐",
+        "value": 96
+      }
+    ]
+  },
+  "ZJ": {
+    "regionId": "ZJ",
+    "regionName": "浙江",
+    "city": "杭州",
+    "audienceCount": 22176000,
+    "activeRate": 60.11,
+    "interactionRate": 3.8,
+    "topCategory": "美食",
+    "gender": [
+      {
+        "label": "女性",
+        "value": 49.4
+      },
+      {
+        "label": "男性",
+        "value": 47.8
+      },
+      {
+        "label": "未知",
+        "value": 2.8
+      }
+    ],
+    "age": [
+      {
+        "label": "18岁以下",
+        "value": 9.2
+      },
+      {
+        "label": "18-24岁",
+        "value": 31.6
+      },
+      {
+        "label": "25-30岁",
+        "value": 28.5
+      },
+      {
+        "label": "31-40岁",
+        "value": 19.5
+      },
+      {
+        "label": "41岁以上",
+        "value": 11.2
+      }
+    ],
+    "device": [
+      {
+        "label": "Android",
+        "value": 66
+      },
+      {
+        "label": "iOS",
+        "value": 29.6
+      },
+      {
+        "label": "Web",
+        "value": 2.8
+      },
+      {
+        "label": "Tablet",
+        "value": 1.6
+      }
+    ],
+    "keywords": [
+      {
+        "word": "热点事件",
+        "value": 97
+      },
+      {
+        "word": "户外露营",
+        "value": 60
+      },
+      {
+        "word": "职场经验",
+        "value": 94
+      },
+      {
+        "word": "城市漫游",
+        "value": 30
+      },
+      {
+        "word": "美食探店",
+        "value": 82
+      },
+      {
+        "word": "地方文化",
+        "value": 57
+      },
+      {
+        "word": "本地生活",
+        "value": 56
+      },
+      {
+        "word": "运动健身",
+        "value": 44
+      }
+    ]
+  },
+  "SC": {
+    "regionId": "SC",
+    "regionName": "四川",
+    "city": "成都",
+    "audienceCount": 19712000,
+    "activeRate": 53.93,
+    "interactionRate": 4.71,
+    "topCategory": "美食",
+    "gender": [
+      {
+        "label": "女性",
+        "value": 53
+      },
+      {
+        "label": "男性",
+        "value": 43.9
+      },
+      {
+        "label": "未知",
+        "value": 3.1
+      }
+    ],
+    "age": [
+      {
+        "label": "18岁以下",
+        "value": 8.3
+      },
+      {
+        "label": "18-24岁",
+        "value": 33.3
+      },
+      {
+        "label": "25-30岁",
+        "value": 24
+      },
+      {
+        "label": "31-40岁",
+        "value": 21.7
+      },
+      {
+        "label": "41岁以上",
+        "value": 12.5
+      }
+    ],
+    "device": [
+      {
+        "label": "Android",
+        "value": 65.9
+      },
+      {
+        "label": "iOS",
+        "value": 30
+      },
+      {
+        "label": "Web",
+        "value": 2.7
+      },
+      {
+        "label": "Tablet",
+        "value": 1.4
+      }
+    ],
+    "keywords": [
+      {
+        "word": "旅行攻略",
+        "value": 100
+      },
+      {
+        "word": "运动健身",
+        "value": 31
+      },
+      {
+        "word": "教程时尚",
+        "value": 44
+      },
+      {
+        "word": "职场经验",
+        "value": 89
+      },
+      {
+        "word": "音乐",
+        "value": 74
+      },
+      {
+        "word": "音乐挑战",
+        "value": 107
+      },
+      {
+        "word": "国风穿搭",
+        "value": 96
+      },
+      {
+        "word": "新闻",
+        "value": 50
+      }
+    ]
+  },
+  "SH": {
+    "regionId": "SH",
+    "regionName": "上海",
+    "city": "上海",
+    "audienceCount": 18810000,
+    "activeRate": 51.92,
+    "interactionRate": 6.24,
+    "topCategory": "穿搭",
+    "gender": [
+      {
+        "label": "女性",
+        "value": 52.2
+      },
+      {
+        "label": "男性",
+        "value": 44.9
+      },
+      {
+        "label": "未知",
+        "value": 2.9
+      }
+    ],
+    "age": [
+      {
+        "label": "18岁以下",
+        "value": 8.4
+      },
+      {
+        "label": "18-24岁",
+        "value": 32.3
+      },
+      {
+        "label": "25-30岁",
+        "value": 23.2
+      },
+      {
+        "label": "31-40岁",
+        "value": 24.3
+      },
+      {
+        "label": "41岁以上",
+        "value": 11.8
+      }
+    ],
+    "device": [
+      {
+        "label": "Android",
+        "value": 69.4
+      },
+      {
+        "label": "iOS",
+        "value": 25.8
+      },
+      {
+        "label": "Web",
+        "value": 3
+      },
+      {
+        "label": "Tablet",
+        "value": 1.7
+      }
+    ],
+    "keywords": [
+      {
+        "word": "旅行攻略",
+        "value": 118
+      },
+      {
+        "word": "剧情反转",
+        "value": 87
+      },
+      {
+        "word": "热点事件",
+        "value": 117
+      },
+      {
+        "word": "城市漫游",
+        "value": 49
+      },
+      {
+        "word": "影视剪辑",
+        "value": 59
+      },
+      {
+        "word": "新闻",
+        "value": 81
+      },
+      {
+        "word": "美食探店",
+        "value": 143
+      },
+      {
+        "word": "影视动漫",
+        "value": 40
+      }
+    ]
+  },
+  "BJ": {
+    "regionId": "BJ",
+    "regionName": "北京",
+    "city": "北京",
+    "audienceCount": 17848000,
+    "activeRate": 45.27,
+    "interactionRate": 3.18,
+    "topCategory": "科技",
+    "gender": [
+      {
+        "label": "女性",
+        "value": 51
+      },
+      {
+        "label": "男性",
+        "value": 46.1
+      },
+      {
+        "label": "未知",
+        "value": 3
+      }
+    ],
+    "age": [
+      {
+        "label": "18岁以下",
+        "value": 9.1
+      },
+      {
+        "label": "18-24岁",
+        "value": 33.7
+      },
+      {
+        "label": "25-30岁",
+        "value": 24.6
+      },
+      {
+        "label": "31-40岁",
+        "value": 21.7
+      },
+      {
+        "label": "41岁以上",
+        "value": 11
+      }
+    ],
+    "device": [
+      {
+        "label": "Android",
+        "value": 66.8
+      },
+      {
+        "label": "iOS",
+        "value": 28.7
+      },
+      {
+        "label": "Web",
+        "value": 3
+      },
+      {
+        "label": "Tablet",
+        "value": 1.5
+      }
+    ],
+    "keywords": [
+      {
+        "word": "城市漫游",
+        "value": 38
+      },
+      {
+        "word": "地方文化",
+        "value": 60
+      },
+      {
+        "word": "新闻",
+        "value": 50
+      },
+      {
+        "word": "职场经验",
+        "value": 52
+      },
+      {
+        "word": "知识科普",
+        "value": 49
+      },
+      {
+        "word": "体育",
+        "value": 37
+      },
+      {
+        "word": "旅行攻略",
+        "value": 123
+      },
+      {
+        "word": "音乐",
+        "value": 87
+      }
+    ]
+  },
+  "HA": {
+    "regionId": "HA",
+    "regionName": "河南",
+    "city": "郑州",
+    "audienceCount": 15943000,
+    "activeRate": 31.15,
+    "interactionRate": 3.23,
+    "topCategory": "剧情",
+    "gender": [
+      {
+        "label": "女性",
+        "value": 51.1
+      },
+      {
+        "label": "男性",
+        "value": 46.2
+      },
+      {
+        "label": "未知",
+        "value": 2.7
+      }
+    ],
+    "age": [
+      {
+        "label": "18岁以下",
+        "value": 9.6
+      },
+      {
+        "label": "18-24岁",
+        "value": 31.8
+      },
+      {
+        "label": "25-30岁",
+        "value": 26.1
+      },
+      {
+        "label": "31-40岁",
+        "value": 19.9
+      },
+      {
+        "label": "41岁以上",
+        "value": 12.6
+      }
+    ],
+    "device": [
+      {
+        "label": "Android",
+        "value": 67.7
+      },
+      {
+        "label": "iOS",
+        "value": 27.7
+      },
+      {
+        "label": "Web",
+        "value": 3
+      },
+      {
+        "label": "Tablet",
+        "value": 1.6
+      }
+    ],
+    "keywords": [
+      {
+        "word": "体育",
+        "value": 56
+      },
+      {
+        "word": "旅行攻略",
+        "value": 82
+      },
+      {
+        "word": "热点事件",
+        "value": 108
+      },
+      {
+        "word": "地方文化",
+        "value": 82
+      },
+      {
+        "word": "娱乐",
+        "value": 279
+      },
+      {
+        "word": "非遗手作",
+        "value": 107
+      },
+      {
+        "word": "运动健身",
+        "value": 50
+      },
+      {
+        "word": "新闻",
+        "value": 71
+      }
+    ]
+  },
+  "SD": {
+    "regionId": "SD",
+    "regionName": "山东",
+    "city": "济南",
+    "audienceCount": 15484000,
+    "activeRate": 41.13,
+    "interactionRate": 8.36,
+    "topCategory": "生活",
+    "gender": [
+      {
+        "label": "女性",
+        "value": 53.7
+      },
+      {
+        "label": "男性",
+        "value": 43.1
+      },
+      {
+        "label": "未知",
+        "value": 3.1
+      }
+    ],
+    "age": [
+      {
+        "label": "18岁以下",
+        "value": 10.2
+      },
+      {
+        "label": "18-24岁",
+        "value": 32.7
+      },
+      {
+        "label": "25-30岁",
+        "value": 22.9
+      },
+      {
+        "label": "31-40岁",
+        "value": 23
+      },
+      {
+        "label": "41岁以上",
+        "value": 11.3
+      }
+    ],
+    "device": [
+      {
+        "label": "Android",
+        "value": 68
+      },
+      {
+        "label": "iOS",
+        "value": 27.3
+      },
+      {
+        "label": "Web",
+        "value": 2.9
+      },
+      {
+        "label": "Tablet",
+        "value": 1.7
+      }
+    ],
+    "keywords": [
+      {
+        "word": "科技数码",
+        "value": 41
+      },
+      {
+        "word": "音乐",
+        "value": 58
+      },
+      {
+        "word": "城市夜景",
+        "value": 56
+      },
+      {
+        "word": "剧情反转",
+        "value": 70
+      },
+      {
+        "word": "职场经验",
+        "value": 89
+      },
+      {
+        "word": "运动健身",
+        "value": 44
+      },
+      {
+        "word": "体育",
+        "value": 54
+      },
+      {
+        "word": "亲子互动",
+        "value": 41
+      }
+    ]
+  },
+  "HB": {
+    "regionId": "HB",
+    "regionName": "湖北",
+    "city": "武汉",
+    "audienceCount": 13192000,
+    "activeRate": 46.64,
+    "interactionRate": 6.53,
+    "topCategory": "教育",
+    "gender": [
+      {
+        "label": "女性",
+        "value": 49.7
+      },
+      {
+        "label": "男性",
+        "value": 47.2
+      },
+      {
+        "label": "未知",
+        "value": 3.1
+      }
+    ],
+    "age": [
+      {
+        "label": "18岁以下",
+        "value": 9.9
+      },
+      {
+        "label": "18-24岁",
+        "value": 32.1
+      },
+      {
+        "label": "25-30岁",
+        "value": 26.9
+      },
+      {
+        "label": "31-40岁",
+        "value": 20.5
+      },
+      {
+        "label": "41岁以上",
+        "value": 10.5
+      }
+    ],
+    "device": [
+      {
+        "label": "Android",
+        "value": 69.4
+      },
+      {
+        "label": "iOS",
+        "value": 26.2
+      },
+      {
+        "label": "Web",
+        "value": 3
+      },
+      {
+        "label": "Tablet",
+        "value": 1.4
+      }
+    ],
+    "keywords": [
+      {
+        "word": "舞蹈翻跳",
+        "value": 44
+      },
+      {
+        "word": "城市夜景",
+        "value": 32
+      },
+      {
+        "word": "开箱测评",
+        "value": 56
+      },
+      {
+        "word": "喜剧",
+        "value": 87
+      },
+      {
+        "word": "音乐",
+        "value": 73
+      },
+      {
+        "word": "知识科普",
+        "value": 42
+      },
+      {
+        "word": "非遗手作",
+        "value": 80
+      },
+      {
+        "word": "学习方法",
+        "value": 86
+      }
+    ]
+  },
+  "FJ": {
+    "regionId": "FJ",
+    "regionName": "福建",
+    "city": "福州",
+    "audienceCount": 13056000,
+    "activeRate": 48.07,
+    "interactionRate": 4.84,
+    "topCategory": "旅行",
+    "gender": [
+      {
+        "label": "女性",
+        "value": 53.2
+      },
+      {
+        "label": "男性",
+        "value": 43.8
+      },
+      {
+        "label": "未知",
+        "value": 3
+      }
+    ],
+    "age": [
+      {
+        "label": "18岁以下",
+        "value": 9.1
+      },
+      {
+        "label": "18-24岁",
+        "value": 26.9
+      },
+      {
+        "label": "25-30岁",
+        "value": 27.5
+      },
+      {
+        "label": "31-40岁",
+        "value": 23.3
+      },
+      {
+        "label": "41岁以上",
+        "value": 13.1
+      }
+    ],
+    "device": [
+      {
+        "label": "Android",
+        "value": 64.7
+      },
+      {
+        "label": "iOS",
+        "value": 30.8
+      },
+      {
+        "label": "Web",
+        "value": 3.1
+      },
+      {
+        "label": "Tablet",
+        "value": 1.5
+      }
+    ],
+    "keywords": [
+      {
+        "word": "美食探店",
+        "value": 96
+      },
+      {
+        "word": "职场经验",
+        "value": 83
+      },
+      {
+        "word": "影视动漫",
+        "value": 33
+      },
+      {
+        "word": "户外露营",
+        "value": 64
+      },
+      {
+        "word": "地方文化",
+        "value": 56
+      },
+      {
+        "word": "运动健身",
+        "value": 41
+      },
+      {
+        "word": "音乐挑战",
+        "value": 75
+      },
+      {
+        "word": "城市漫游",
+        "value": 27
+      }
+    ]
+  },
+  "CQ": {
+    "regionId": "CQ",
+    "regionName": "重庆",
+    "city": "重庆",
+    "audienceCount": 12412000,
+    "activeRate": 30.15,
+    "interactionRate": 4.43,
+    "topCategory": "美食",
+    "gender": [
+      {
+        "label": "女性",
+        "value": 49.8
+      },
+      {
+        "label": "男性",
+        "value": 47.3
+      },
+      {
+        "label": "未知",
+        "value": 2.9
+      }
+    ],
+    "age": [
+      {
+        "label": "18岁以下",
+        "value": 10.2
+      },
+      {
+        "label": "18-24岁",
+        "value": 28.8
+      },
+      {
+        "label": "25-30岁",
+        "value": 25.2
+      },
+      {
+        "label": "31-40岁",
+        "value": 23.2
+      },
+      {
+        "label": "41岁以上",
+        "value": 12.6
+      }
+    ],
+    "device": [
+      {
+        "label": "Android",
+        "value": 68.1
+      },
+      {
+        "label": "iOS",
+        "value": 27.6
+      },
+      {
+        "label": "Web",
+        "value": 2.9
+      },
+      {
+        "label": "Tablet",
+        "value": 1.4
+      }
+    ],
+    "keywords": [
+      {
+        "word": "职场经验",
+        "value": 89
+      },
+      {
+        "word": "城市夜景",
+        "value": 36
+      },
+      {
+        "word": "影视动漫",
+        "value": 43
+      },
+      {
+        "word": "生活",
+        "value": 95
+      },
+      {
+        "word": "影视剪辑",
+        "value": 69
+      },
+      {
+        "word": "本地生活",
+        "value": 74
+      },
+      {
+        "word": "教程时尚",
+        "value": 35
+      },
+      {
+        "word": "体育",
+        "value": 34
+      }
+    ]
+  },
+  "HN": {
+    "regionId": "HN",
+    "regionName": "湖南",
+    "city": "长沙",
+    "audienceCount": 12200000,
+    "activeRate": 31.93,
+    "interactionRate": 6.97,
+    "topCategory": "娱乐",
+    "gender": [
+      {
+        "label": "女性",
+        "value": 50
+      },
+      {
+        "label": "男性",
+        "value": 47.1
+      },
+      {
+        "label": "未知",
+        "value": 2.9
+      }
+    ],
+    "age": [
+      {
+        "label": "18岁以下",
+        "value": 8.1
+      },
+      {
+        "label": "18-24岁",
+        "value": 27.6
+      },
+      {
+        "label": "25-30岁",
+        "value": 28.2
+      },
+      {
+        "label": "31-40岁",
+        "value": 23.5
+      },
+      {
+        "label": "41岁以上",
+        "value": 12.6
+      }
+    ],
+    "device": [
+      {
+        "label": "Android",
+        "value": 67.6
+      },
+      {
+        "label": "iOS",
+        "value": 27.7
+      },
+      {
+        "label": "Web",
+        "value": 2.9
+      },
+      {
+        "label": "Tablet",
+        "value": 1.7
+      }
+    ],
+    "keywords": [
+      {
+        "word": "舞蹈翻跳",
+        "value": 45
+      },
+      {
+        "word": "本地生活",
+        "value": 59
+      },
+      {
+        "word": "旅行攻略",
+        "value": 114
+      },
+      {
+        "word": "非遗手作",
+        "value": 59
+      },
+      {
+        "word": "开箱测评",
+        "value": 51
+      },
+      {
+        "word": "国风穿搭",
+        "value": 107
+      },
+      {
+        "word": "娱乐",
+        "value": 302
+      },
+      {
+        "word": "学习方法",
+        "value": 86
+      }
+    ]
+  },
+  "SX": {
+    "regionId": "SX",
+    "regionName": "陕西",
+    "city": "西安",
+    "audienceCount": 11960000,
+    "activeRate": 59.8,
+    "interactionRate": 3.83,
+    "topCategory": "历史文化",
+    "gender": [
+      {
+        "label": "女性",
+        "value": 49.3
+      },
+      {
+        "label": "男性",
+        "value": 47.4
+      },
+      {
+        "label": "未知",
+        "value": 3.3
+      }
+    ],
+    "age": [
+      {
+        "label": "18岁以下",
+        "value": 9.5
+      },
+      {
+        "label": "18-24岁",
+        "value": 28.9
+      },
+      {
+        "label": "25-30岁",
+        "value": 29.6
+      },
+      {
+        "label": "31-40岁",
+        "value": 19.6
+      },
+      {
+        "label": "41岁以上",
+        "value": 12.4
+      }
+    ],
+    "device": [
+      {
+        "label": "Android",
+        "value": 65.8
+      },
+      {
+        "label": "iOS",
+        "value": 29.9
+      },
+      {
+        "label": "Web",
+        "value": 2.9
+      },
+      {
+        "label": "Tablet",
+        "value": 1.4
+      }
+    ],
+    "keywords": [
+      {
+        "word": "体育",
+        "value": 39
+      },
+      {
+        "word": "运动健身",
+        "value": 29
+      },
+      {
+        "word": "地方文化",
+        "value": 55
+      },
+      {
+        "word": "剧情反转",
+        "value": 94
+      },
+      {
+        "word": "城市夜景",
+        "value": 50
+      },
+      {
+        "word": "非遗手作",
+        "value": 105
+      },
+      {
+        "word": "影视剪辑",
+        "value": 41
+      },
+      {
+        "word": "萌宠日常",
+        "value": 63
+      }
+    ]
+  },
+  "AH": {
+    "regionId": "AH",
+    "regionName": "安徽",
+    "city": "合肥",
+    "audienceCount": 11172000,
+    "activeRate": 53.83,
+    "interactionRate": 6.58,
+    "topCategory": "生活",
+    "gender": [
+      {
+        "label": "女性",
+        "value": 49.5
+      },
+      {
+        "label": "男性",
+        "value": 47.6
+      },
+      {
+        "label": "未知",
+        "value": 2.9
+      }
+    ],
+    "age": [
+      {
+        "label": "18岁以下",
+        "value": 8.7
+      },
+      {
+        "label": "18-24岁",
+        "value": 28.5
+      },
+      {
+        "label": "25-30岁",
+        "value": 28.4
+      },
+      {
+        "label": "31-40岁",
+        "value": 23.2
+      },
+      {
+        "label": "41岁以上",
+        "value": 11.2
+      }
+    ],
+    "device": [
+      {
+        "label": "Android",
+        "value": 68.2
+      },
+      {
+        "label": "iOS",
+        "value": 27.4
+      },
+      {
+        "label": "Web",
+        "value": 2.9
+      },
+      {
+        "label": "Tablet",
+        "value": 1.5
+      }
+    ],
+    "keywords": [
+      {
+        "word": "城市夜景",
+        "value": 54
+      },
+      {
+        "word": "户外露营",
+        "value": 83
+      },
+      {
+        "word": "知识科普",
+        "value": 46
+      },
+      {
+        "word": "开箱测评",
+        "value": 69
+      },
+      {
+        "word": "影视剪辑",
+        "value": 72
+      },
+      {
+        "word": "娱乐",
+        "value": 198
+      },
+      {
+        "word": "音乐",
+        "value": 83
+      },
+      {
+        "word": "美食探店",
+        "value": 82
+      }
+    ]
+  },
+  "GX": {
+    "regionId": "GX",
+    "regionName": "广西",
+    "city": "南宁",
+    "audienceCount": 9379000,
+    "activeRate": 29.19,
+    "interactionRate": 6.25,
+    "topCategory": "美食",
+    "gender": [
+      {
+        "label": "女性",
+        "value": 53
+      },
+      {
+        "label": "男性",
+        "value": 44.2
+      },
+      {
+        "label": "未知",
+        "value": 2.9
+      }
+    ],
+    "age": [
+      {
+        "label": "18岁以下",
+        "value": 7.7
+      },
+      {
+        "label": "18-24岁",
+        "value": 28.4
+      },
+      {
+        "label": "25-30岁",
+        "value": 29.9
+      },
+      {
+        "label": "31-40岁",
+        "value": 21.4
+      },
+      {
+        "label": "41岁以上",
+        "value": 12.5
+      }
+    ],
+    "device": [
+      {
+        "label": "Android",
+        "value": 65.1
+      },
+      {
+        "label": "iOS",
+        "value": 30.7
+      },
+      {
+        "label": "Web",
+        "value": 2.7
+      },
+      {
+        "label": "Tablet",
+        "value": 1.5
+      }
+    ],
+    "keywords": [
+      {
+        "word": "开箱测评",
+        "value": 60
+      },
+      {
+        "word": "亲子互动",
+        "value": 65
+      },
+      {
+        "word": "新闻",
+        "value": 87
+      },
+      {
+        "word": "创作教程",
+        "value": 46
+      },
+      {
+        "word": "科技数码",
+        "value": 40
+      },
+      {
+        "word": "教程时尚",
+        "value": 43
+      },
+      {
+        "word": "学习方法",
+        "value": 57
+      },
+      {
+        "word": "城市漫游",
+        "value": 38
+      }
+    ]
+  },
+  "LN": {
+    "regionId": "LN",
+    "regionName": "辽宁",
+    "city": "沈阳",
+    "audienceCount": 9292000,
+    "activeRate": 39.24,
+    "interactionRate": 5.28,
+    "topCategory": "体育",
+    "gender": [
+      {
+        "label": "女性",
+        "value": 52.2
+      },
+      {
+        "label": "男性",
+        "value": 45
+      },
+      {
+        "label": "未知",
+        "value": 2.8
+      }
+    ],
+    "age": [
+      {
+        "label": "18岁以下",
+        "value": 9
+      },
+      {
+        "label": "18-24岁",
+        "value": 31.1
+      },
+      {
+        "label": "25-30岁",
+        "value": 24.1
+      },
+      {
+        "label": "31-40岁",
+        "value": 21.5
+      },
+      {
+        "label": "41岁以上",
+        "value": 14.1
+      }
+    ],
+    "device": [
+      {
+        "label": "Android",
+        "value": 70
+      },
+      {
+        "label": "iOS",
+        "value": 25.6
+      },
+      {
+        "label": "Web",
+        "value": 2.9
+      },
+      {
+        "label": "Tablet",
+        "value": 1.5
+      }
+    ],
+    "keywords": [
+      {
+        "word": "科技数码",
+        "value": 31
+      },
+      {
+        "word": "体育",
+        "value": 48
+      },
+      {
+        "word": "影视动漫",
+        "value": 33
+      },
+      {
+        "word": "国风穿搭",
+        "value": 66
+      },
+      {
+        "word": "萌宠日常",
+        "value": 77
+      },
+      {
+        "word": "音乐",
+        "value": 86
+      },
+      {
+        "word": "地方文化",
+        "value": 52
+      },
+      {
+        "word": "新闻",
+        "value": 64
+      }
+    ]
+  },
+  "YN": {
+    "regionId": "YN",
+    "regionName": "云南",
+    "city": "昆明",
+    "audienceCount": 9152000,
+    "activeRate": 29.83,
+    "interactionRate": 8.24,
+    "topCategory": "旅行",
+    "gender": [
+      {
+        "label": "女性",
+        "value": 49.9
+      },
+      {
+        "label": "男性",
+        "value": 47
+      },
+      {
+        "label": "未知",
+        "value": 3.1
+      }
+    ],
+    "age": [
+      {
+        "label": "18岁以下",
+        "value": 9.1
+      },
+      {
+        "label": "18-24岁",
+        "value": 27.4
+      },
+      {
+        "label": "25-30岁",
+        "value": 28
+      },
+      {
+        "label": "31-40岁",
+        "value": 23.7
+      },
+      {
+        "label": "41岁以上",
+        "value": 11.8
+      }
+    ],
+    "device": [
+      {
+        "label": "Android",
+        "value": 67.9
+      },
+      {
+        "label": "iOS",
+        "value": 28
+      },
+      {
+        "label": "Web",
+        "value": 2.5
+      },
+      {
+        "label": "Tablet",
+        "value": 1.6
+      }
+    ],
+    "keywords": [
+      {
+        "word": "城市夜景",
+        "value": 56
+      },
+      {
+        "word": "音乐挑战",
+        "value": 126
+      },
+      {
+        "word": "体育",
+        "value": 62
+      },
+      {
+        "word": "非遗手作",
+        "value": 81
+      },
+      {
+        "word": "娱乐",
+        "value": 224
+      },
+      {
+        "word": "创作教程",
+        "value": 66
+      },
+      {
+        "word": "音乐",
+        "value": 91
+      },
+      {
+        "word": "喜剧",
+        "value": 111
+      }
+    ]
+  },
+  "JX": {
+    "regionId": "JX",
+    "regionName": "江西",
+    "city": "南昌",
+    "audienceCount": 7524000,
+    "activeRate": 51.34,
+    "interactionRate": 4.15,
+    "topCategory": "生活",
+    "gender": [
+      {
+        "label": "女性",
+        "value": 53.9
+      },
+      {
+        "label": "男性",
+        "value": 43.1
+      },
+      {
+        "label": "未知",
+        "value": 3.1
+      }
+    ],
+    "age": [
+      {
+        "label": "18岁以下",
+        "value": 8.9
+      },
+      {
+        "label": "18-24岁",
+        "value": 30.1
+      },
+      {
+        "label": "25-30岁",
+        "value": 26.7
+      },
+      {
+        "label": "31-40岁",
+        "value": 20.4
+      },
+      {
+        "label": "41岁以上",
+        "value": 14
+      }
+    ],
+    "device": [
+      {
+        "label": "Android",
+        "value": 68.7
+      },
+      {
+        "label": "iOS",
+        "value": 27.3
+      },
+      {
+        "label": "Web",
+        "value": 2.7
+      },
+      {
+        "label": "Tablet",
+        "value": 1.3
+      }
+    ],
+    "keywords": [
+      {
+        "word": "校园生活",
+        "value": 82
+      },
+      {
+        "word": "城市漫游",
+        "value": 48
+      },
+      {
+        "word": "影视动漫",
+        "value": 28
+      },
+      {
+        "word": "体育",
+        "value": 38
+      },
+      {
+        "word": "创作教程",
+        "value": 55
+      },
+      {
+        "word": "亲子互动",
+        "value": 68
+      },
+      {
+        "word": "生活",
+        "value": 110
+      },
+      {
+        "word": "喜剧",
+        "value": 77
+      }
+    ]
+  },
+  "TJ": {
+    "regionId": "TJ",
+    "regionName": "天津",
+    "city": "天津",
+    "audienceCount": 7488000,
+    "activeRate": 34.34,
+    "interactionRate": 3.01,
+    "topCategory": "剧情",
+    "gender": [
+      {
+        "label": "女性",
+        "value": 50.6
+      },
+      {
+        "label": "男性",
+        "value": 46.2
+      },
+      {
+        "label": "未知",
+        "value": 3.2
+      }
+    ],
+    "age": [
+      {
+        "label": "18岁以下",
+        "value": 7.2
+      },
+      {
+        "label": "18-24岁",
+        "value": 34.5
+      },
+      {
+        "label": "25-30岁",
+        "value": 25.3
+      },
+      {
+        "label": "31-40岁",
+        "value": 22.8
+      },
+      {
+        "label": "41岁以上",
+        "value": 10.2
+      }
+    ],
+    "device": [
+      {
+        "label": "Android",
+        "value": 69.9
+      },
+      {
+        "label": "iOS",
+        "value": 26.2
+      },
+      {
+        "label": "Web",
+        "value": 2.5
+      },
+      {
+        "label": "Tablet",
+        "value": 1.4
+      }
+    ],
+    "keywords": [
+      {
+        "word": "知识科普",
+        "value": 25
+      },
+      {
+        "word": "亲子互动",
+        "value": 50
+      },
+      {
+        "word": "音乐",
+        "value": 83
+      },
+      {
+        "word": "地方文化",
+        "value": 51
+      },
+      {
+        "word": "影视剪辑",
+        "value": 43
+      },
+      {
+        "word": "城市漫游",
+        "value": 48
+      },
+      {
+        "word": "职场经验",
+        "value": 73
+      },
+      {
+        "word": "创作教程",
+        "value": 62
+      }
+    ]
+  },
+  "HE": {
+    "regionId": "HE",
+    "regionName": "河北",
+    "city": "石家庄",
+    "audienceCount": 7176000,
+    "activeRate": 46.3,
+    "interactionRate": 5.25,
+    "topCategory": "生活",
+    "gender": [
+      {
+        "label": "女性",
+        "value": 48.6
+      },
+      {
+        "label": "男性",
+        "value": 48.4
+      },
+      {
+        "label": "未知",
+        "value": 3.1
+      }
+    ],
+    "age": [
+      {
+        "label": "18岁以下",
+        "value": 8.8
+      },
+      {
+        "label": "18-24岁",
+        "value": 28.9
+      },
+      {
+        "label": "25-30岁",
+        "value": 30.3
+      },
+      {
+        "label": "31-40岁",
+        "value": 18.9
+      },
+      {
+        "label": "41岁以上",
+        "value": 13.2
+      }
+    ],
+    "device": [
+      {
+        "label": "Android",
+        "value": 68.1
+      },
+      {
+        "label": "iOS",
+        "value": 27.6
+      },
+      {
+        "label": "Web",
+        "value": 2.7
+      },
+      {
+        "label": "Tablet",
+        "value": 1.6
+      }
+    ],
+    "keywords": [
+      {
+        "word": "热点事件",
+        "value": 84
+      },
+      {
+        "word": "影视动漫",
+        "value": 31
+      },
+      {
+        "word": "国风穿搭",
+        "value": 70
+      },
+      {
+        "word": "户外露营",
+        "value": 72
+      },
+      {
+        "word": "音乐",
+        "value": 85
+      },
+      {
+        "word": "生活",
+        "value": 70
+      },
+      {
+        "word": "校园生活",
+        "value": 75
+      },
+      {
+        "word": "开箱测评",
+        "value": 71
+      }
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "gender": [
+    {
+      "label": "女性",
+      "value": 51.2
+    },
+    {
+      "label": "男性",
+      "value": 45.8
+    },
+    {
+      "label": "未知",
+      "value": 3
+    }
+  ],
+  "age": [
+    {
+      "label": "18岁以下",
+      "value": 8.8
+    },
+    {
+      "label": "18-24岁",
+      "value": 31.6
+    },
+    {
+      "label": "25-30岁",
+      "value": 26.2
+    },
+    {
+      "label": "31-40岁",
+      "value": 21.4
+    },
+    {
+      "label": "41岁以上",
+      "value": 12
+    }
+  ],
+  "device": [
+    {
+      "label": "Android",
+      "value": 68.5
+    },
+    {
+      "label": "iOS",
+      "value": 27.2
+    },
+    {
+      "label": "Web",
+      "value": 2.8
+    },
+    {
+      "label": "Tablet",
+      "value": 1.5
+    }
+  ]
+}

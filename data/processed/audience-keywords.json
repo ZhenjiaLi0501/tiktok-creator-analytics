@@ -1,0 +1,162 @@
+[
+  {
+    "word": "娱乐",
+    "value": 254,
+    "type": "category"
+  },
+  {
+    "word": "美食探店",
+    "value": 108,
+    "type": "interest"
+  },
+  {
+    "word": "旅行攻略",
+    "value": 100,
+    "type": "interest"
+  },
+  {
+    "word": "音乐挑战",
+    "value": 98,
+    "type": "interest"
+  },
+  {
+    "word": "国风穿搭",
+    "value": 95,
+    "type": "interest"
+  },
+  {
+    "word": "热点事件",
+    "value": 93,
+    "type": "interest"
+  },
+  {
+    "word": "喜剧",
+    "value": 87,
+    "type": "category"
+  },
+  {
+    "word": "非遗手作",
+    "value": 84,
+    "type": "interest"
+  },
+  {
+    "word": "生活",
+    "value": 83,
+    "type": "category"
+  },
+  {
+    "word": "职场经验",
+    "value": 79,
+    "type": "interest"
+  },
+  {
+    "word": "本地生活",
+    "value": 77,
+    "type": "interest"
+  },
+  {
+    "word": "音乐",
+    "value": 74,
+    "type": "category"
+  },
+  {
+    "word": "新闻",
+    "value": 73,
+    "type": "category"
+  },
+  {
+    "word": "萌宠日常",
+    "value": 73,
+    "type": "interest"
+  },
+  {
+    "word": "剧情反转",
+    "value": 71,
+    "type": "interest"
+  },
+  {
+    "word": "地方文化",
+    "value": 68,
+    "type": "interest"
+  },
+  {
+    "word": "学习方法",
+    "value": 65,
+    "type": "interest"
+  },
+  {
+    "word": "户外露营",
+    "value": 64,
+    "type": "interest"
+  },
+  {
+    "word": "舞蹈翻跳",
+    "value": 64,
+    "type": "interest"
+  },
+  {
+    "word": "校园生活",
+    "value": 61,
+    "type": "interest"
+  },
+  {
+    "word": "亲子互动",
+    "value": 60,
+    "type": "interest"
+  },
+  {
+    "word": "开箱测评",
+    "value": 54,
+    "type": "interest"
+  },
+  {
+    "word": "影视剪辑",
+    "value": 54,
+    "type": "interest"
+  },
+  {
+    "word": "创作教程",
+    "value": 53,
+    "type": "interest"
+  },
+  {
+    "word": "体育",
+    "value": 50,
+    "type": "category"
+  },
+  {
+    "word": "城市夜景",
+    "value": 42,
+    "type": "interest"
+  },
+  {
+    "word": "影视动漫",
+    "value": 40,
+    "type": "category"
+  },
+  {
+    "word": "城市漫游",
+    "value": 40,
+    "type": "interest"
+  },
+  {
+    "word": "运动健身",
+    "value": 38,
+    "type": "interest"
+  },
+  {
+    "word": "科技数码",
+    "value": 38,
+    "type": "interest"
+  },
+  {
+    "word": "知识科普",
+    "value": 38,
+    "type": "interest"
+  },
+  {
+    "word": "教程时尚",
+    "value": 37,
+    "type": "category"
+  }
+]
