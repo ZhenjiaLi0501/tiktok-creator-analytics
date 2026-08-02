@@ -6,29 +6,43 @@ import {
   getAudienceDemographics,
   getAudienceOverview,
   getAudienceRegions,
+  getAudienceKeywords,
 } from '@/services/audience';
 
-import type { AudienceDemographics, AudienceOverview, AudienceRegion } from '@/types/audience';
+import type {
+  AudienceDemographics,
+  AudienceOverview,
+  AudienceRegion,
+  AudienceKeyword,
+} from '@/types/audience';
 import { AudienceRegionSection } from './audience-region-section';
 import { AudienceDemographicsSection } from './audience-demographics-section';
 import { AudienceOverviewSection } from './audience-overview-section';
+import { AudienceKeywordSection } from './audience-keyword-section';
 
 export function AudiencePageContent() {
   const [overview, setOverview] = useState<AudienceOverview | null>(null);
   const [demographics, setDemographics] = useState<AudienceDemographics | null>(null);
   const [regions, setRegions] = useState<AudienceRegion[]>([]);
+  const [keywords, setKeywords] = useState<AudienceKeyword[]>([]);
   const [loading, setLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   useEffect(() => {
     let ignore = false;
 
-    Promise.all([getAudienceOverview(), getAudienceDemographics(), getAudienceRegions()])
-      .then(([overviewResponse, demographicsResponse, regionsResponse]) => {
+    Promise.all([
+      getAudienceOverview(),
+      getAudienceDemographics(),
+      getAudienceRegions(),
+      getAudienceKeywords(),
+    ])
+      .then(([overviewResponse, demographicsResponse, regionsResponse, keywordsResponse]) => {
         if (ignore) return;
         setOverview(overviewResponse);
         setDemographics(demographicsResponse);
         setRegions(regionsResponse);
+        setKeywords(keywordsResponse);
       })
       .catch((err) => {
         if (ignore) return;
@@ -50,7 +64,7 @@ export function AudiencePageContent() {
       </div>
     );
   }
-  if (errorMessage || !overview || !demographics || regions.length === 0) {
+  if (errorMessage || !overview || !demographics || regions.length === 0 || keywords.length === 0) {
     return (
       <div className="rounded-2xl border border-red-500/30 bg-red-500/10 p-8 text-center">
         <div className="text-lg font-semibold text-red-100">画像数据加载失败</div>
@@ -65,6 +79,7 @@ export function AudiencePageContent() {
       <AudienceOverviewSection overview={overview} />
       <AudienceDemographicsSection demographics={demographics} />
       <AudienceRegionSection regions={regions} />
+      <AudienceKeywordSection keywords={keywords} />
     </div>
   );
 }
