@@ -1,13 +1,15 @@
 import { PageHeader } from '@/components/business/page-header';
+import { AudiencePageContent } from '@/features/audience/components/audience-page-content';
 
 export default function AudiencePage() {
   return (
-    <section>
+    <div className="space-y-6">
       <PageHeader
         badge="Audience"
         title="观众画像"
-        description="展示平台用户的性别、年龄、地域、终端和兴趣标签分布。"
+        description="分析中国区观众的基础属性、地域分布、终端偏好和内容兴趣。"
       />
-    </section>
+      <AudiencePageContent />
+    </div>
   );
 }
