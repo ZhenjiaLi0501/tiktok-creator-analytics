@@ -15,6 +15,8 @@ import type {
   AudienceRegion,
   AudienceKeyword,
 } from '@/types/audience';
+import { EmptyState } from '@/components/common/empty-state';
+import { AudiencePageSkeleton } from './audience-page-skeleton';
 import { AudienceRegionSection } from './audience-region-section';
 import { AudienceDemographicsSection } from './audience-demographics-section';
 import { AudienceOverviewSection } from './audience-overview-section';
@@ -58,20 +60,22 @@ export function AudiencePageContent() {
     };
   }, []);
   if (loading) {
-    return (
-      <div className="rounded-2xl border border-slate-800 bg-slate-950/40 p-8 text-center text-sm text-slate-400">
-        观众画像数据加载中...
-      </div>
-    );
+    return <AudiencePageSkeleton />;
   }
-  if (errorMessage || !overview || !demographics || regions.length === 0 || keywords.length === 0) {
+  if (errorMessage) {
     return (
       <div className="rounded-2xl border border-red-500/30 bg-red-500/10 p-8 text-center">
         <div className="text-lg font-semibold text-red-100">画像数据加载失败</div>
-        <div className="mt-2 text-sm text-red-200">
-          {errorMessage || '当前观众画像数据为空，请重新生成audience mock数据'}
-        </div>
+        <div className="mt-2 text-sm text-red-200">{errorMessage}</div>
       </div>
+    );
+  }
+  if (!overview || !demographics || regions.length === 0 || keywords.length === 0) {
+    return (
+      <EmptyState
+        title="暂无观众画像数据"
+        description="当前audience mock数据为空，请重新执行pnpm data:audience生成中国区画像数据"
+      />
     );
   }
   return (
