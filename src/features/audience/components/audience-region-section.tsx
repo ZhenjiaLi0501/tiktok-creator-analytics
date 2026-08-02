@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState, useCallback } from 'react';
 
 import { getAudienceRegionDetail } from '@/services/audience';
 import { formatCompactNumber } from '@/lib/format';
@@ -61,7 +61,13 @@ function RegionDetailPanel({
   selectedRegion: AudienceRegion | undefined;
 }) {
   if (!selectedRegion) {
-    return null;
+    return (
+      <div className="rounded-2xl border border-slate-800 bg-slate-950/40 p-5">
+        <div className="text-sm text-slate-400">
+          点击地图中的省份热点，查看该地区的观众画像详情。
+        </div>
+      </div>
+    );
   }
 
   if (!detail) {
@@ -119,9 +125,13 @@ function RegionDetailPanel({
 }
 
 export function AudienceRegionSection({ regions }: AudienceRegionSectionProps) {
-  const initialRegionId = regions[0]?.id ?? '';
-  const [selectedRegionId, setSelectedRegionId] = useState(initialRegionId);
+  const [selectedRegionId, setSelectedRegionId] = useState('');
   const [regionDetail, setRegionDetail] = useState<AudienceRegionDetail | null>(null);
+
+  const handleRegionSelect = useCallback((regionId: string) => {
+    setSelectedRegionId(regionId);
+    setRegionDetail(null); // Reset the region detail when a new region is selected
+  }, []);
 
   const selectedRegion = useMemo(
     () => regions.find((region) => region.id === selectedRegionId),
@@ -162,7 +172,7 @@ export function AudienceRegionSection({ regions }: AudienceRegionSectionProps) {
       <ChinaAudienceHeatmap
         regions={regions}
         selectedRegionId={selectedRegionId}
-        onRegionSelect={setSelectedRegionId}
+        onRegionSelect={handleRegionSelect}
       />
 
       <RegionDetailPanel detail={regionDetail} selectedRegion={selectedRegion} />
