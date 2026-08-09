@@ -1,13 +1,15 @@
 import { PageHeader } from '@/components/business/page-header';
+import { CreatorAssistantPageContent } from '@/features/creator-assistant/components/creator-assistant-page-content';
 
 export default function AssistantPage() {
   return (
-    <section>
+    <div className="space-y-6">
       <PageHeader
-        badge="Assistant"
         title="创作助手"
-        description="分析热点内容、发布时间规律和标题词频，为平台运营提供内容趋势判断。"
+        description="基于历史内容表现分析热点榜单、分类趋势和创作优化方向，辅助创作者制定内容策略。"
       />
-    </section>
+
+      <CreatorAssistantPageContent />
+    </div>
   );
 }

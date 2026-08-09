@@ -9,10 +9,10 @@
   },
   {
     "id": "suggestion_publish_time",
-    "title": "优先选择 周六 01:00 发布",
+    "title": "优先选择 周五 13:00 发布",
     "type": "publish_time",
     "priority": "high",
-    "reason": "该时段历史平均播放量较高，预计播放提升 NaN%。",
+    "reason": "该时段历史平均播放量较高，预计播放提升 13.9%。",
     "action": "建议将重点内容安排在该时段前 30 分钟完成审核与排期。"
   },
   {
@@ -25,7 +25,7 @@
   },
   {
     "id": "suggestion_category_combo",
-    "title": "尝试「音乐 + 喜剧」组合选题",
+    "title": "尝试「音乐 + 娱乐」组合选题",
     "type": "topic",
     "priority": "medium",
     "reason": "两个分类均处于较高趋势区间，适合做跨垂类内容实验。",
@@ -33,15 +33,15 @@
   },
   {
     "id": "suggestion_second_time",
-    "title": "备用发布时间：周二 01:00",
+    "title": "备用发布时间：周四 12:00",
     "type": "publish_time",
     "priority": "low",
-    "reason": "该时段样本竞争度为竞争较高，适合作为非头部内容发布时间。",
+    "reason": "该时段样本竞争度为竞争较低，适合作为非头部内容发布时间。",
     "action": "适合安排长尾内容或稳定更新内容。"
   },
   {
     "id": "suggestion_hot_content",
-    "title": "参考 TOP 内容《YouTube Rewind: Th...》",
+    "title": "参考 TOP 内容《Eminem - Walk On W...》",
     "type": "hot_content",
     "priority": "high",
     "reason": "该内容在播放量、互动率和评论表现上综合排名靠前。",

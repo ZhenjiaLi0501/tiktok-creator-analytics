@@ -1,6 +1,6 @@
 {
   "source": "Kaggle Youyubr Trending Video Statistics",
-  "generatedAt": "2026-07-24T06:17:43.664Z",
+  "generatedAt": "2026-08-09T11:03:57.580Z",
   "rawRows": 280663,
   "outputRows": 100000,
   "note": "Raw public video dataset is transformed and expanded into mock data for a Douyin content management list."

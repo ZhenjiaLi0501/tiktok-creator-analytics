@@ -95,6 +95,24 @@ function toSafeNumber(value) {
 
   return Number.isFinite(numberValue) ? numberValue : 0;
 }
+function getEngagementRate(item) {
+  const currentValue = Number(item.engagementRate);
+
+  if (Number.isFinite(currentValue)) {
+    return currentValue;
+  }
+
+  const playCount = toSafeNumber(item.playCount);
+  const likeCount = toSafeNumber(item.likeCount);
+  const commentCount = toSafeNumber(item.commentCount);
+  const shareCount = toSafeNumber(item.shareCount);
+
+  if (playCount <= 0) {
+    return 0;
+  }
+
+  return Number((((likeCount + commentCount + shareCount) / playCount) * 100).toFixed(2));
+}
 
 function getChinaPublishTime(value) {
   const date = new Date(value);
@@ -153,7 +171,7 @@ function calculateHotScore(item, maxStats) {
   const playScore = (toSafeNumber(item.playCount) / maxStats.playCount) * 45;
   const likeScore = (toSafeNumber(item.likeCount) / maxStats.likeCount) * 22;
   const commentScore = (toSafeNumber(item.commentCount) / maxStats.commentCount) * 18;
-  const engagementScore = (toSafeNumber(item.engagementRate) / maxStats.engagementRate) * 15;
+  const engagementScore = (getEngagementRate(item) / maxStats.engagementRate) * 15;
 
   return Number(Math.min(100, playScore + likeScore + commentScore + engagementScore).toFixed(1));
 }
@@ -164,6 +182,7 @@ function buildHotContents(contentList) {
   return [...contentList]
     .map((item) => {
       const { weekday, hour } = getChinaPublishTime(item.publishTime);
+      const engagementRate = getEngagementRate(item);
       const hotScore = calculateHotScore(item, maxStats);
 
       return {
@@ -177,11 +196,11 @@ function buildHotContents(contentList) {
         likeCount: item.likeCount,
         commentCount: item.commentCount,
         shareCount: item.shareCount,
-        engagementRate: item.engagementRate,
+        engagementRate,
         hotScore,
         reasonTags: [
           hotScore >= 80 ? '高热内容' : '稳定表现',
-          item.engagementRate >= 5 ? '互动突出' : '播放表现突出',
+          engagementRate >= 5 ? '互动突出' : '播放表现突出',
           `${item.category}类内容`,
         ],
       };
@@ -213,7 +232,7 @@ function buildCategoryTrends(contentList) {
     current.likeCount += item.likeCount;
     current.commentCount += item.commentCount;
     current.shareCount += item.shareCount;
-    current.engagementRateTotal += item.engagementRate;
+    current.engagementRateTotal += getEngagementRate(item);
 
     categoryMap.set(item.category, current);
   });
@@ -277,7 +296,7 @@ function buildPublishTimes(contentList) {
 
     current.videoCount += 1;
     current.playCount += item.playCount;
-    current.engagementRateTotal += item.engagementRate;
+    current.engagementRateTotal += getEngagementRate(item);
 
     slotMap.set(key, current);
   });
