@@ -86,10 +86,6 @@ function writeJson(fileName, data) {
   fs.writeFileSync(filePath, `${JSON.stringify(data, null, 2)}\n`, 'utf-8');
 }
 
-function sumBy(list, key) {
-  return list.reduce((total, item) => total + item[key], 0);
-}
-
 function toSafeNumber(value) {
   const numberValue = Number(value);
 

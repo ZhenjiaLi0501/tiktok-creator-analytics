@@ -9,6 +9,7 @@ import {
   getAssistantOverview,
   getAssistantPublishTimes,
   getAssistantTitleKeywords,
+  getAssistantSuggestions,
 } from '@/services/creator-assistant';
 import type {
   AssistantCategoryTrend,
@@ -16,6 +17,7 @@ import type {
   AssistantOverview,
   AssistantPublishTime,
   AssistantTitleKeyword,
+  AssistantSuggestion,
 } from '@/types/creator-assistant';
 
 import { CreatorAssistantCategoryTrendSection } from './creator-assistant-category-trend-section';
@@ -24,6 +26,7 @@ import { CreatorAssistantOverviewSection } from './creator-assistant-overview-se
 import { CreatorAssistantPageSkeleton } from './creator-assistant-page-skeleton';
 import { CreatorAssistantPublishTimeSection } from './creator-assistant-publish-time-section';
 import { CreatorAssistantTitleKeywordSection } from './creator-assistant-title-keyword-section';
+import { CreatorAssistantSuggestionSection } from './creator-assistant-suggestion-section';
 
 export function CreatorAssistantPageContent() {
   const [overview, setOverview] = useState<AssistantOverview | null>(null);
@@ -31,6 +34,7 @@ export function CreatorAssistantPageContent() {
   const [categoryTrends, setCategoryTrends] = useState<AssistantCategoryTrend[]>([]);
   const [publishTimes, setPublishTimes] = useState<AssistantPublishTime[]>([]);
   const [titleKeywords, setTitleKeywords] = useState<AssistantTitleKeyword[]>([]);
+  const [suggestions, setSuggestions] = useState<AssistantSuggestion[]>([]);
   const [loading, setLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -43,6 +47,7 @@ export function CreatorAssistantPageContent() {
       getAssistantCategoryTrends(),
       getAssistantPublishTimes(),
       getAssistantTitleKeywords(),
+      getAssistantSuggestions(),
     ])
       .then(
         ([
@@ -51,6 +56,7 @@ export function CreatorAssistantPageContent() {
           categoryTrendsResponse,
           publishTimesResponse,
           titleKeywordsResponse,
+          suggestionsResponse,
         ]) => {
           if (ignore) {
             return;
@@ -61,6 +67,7 @@ export function CreatorAssistantPageContent() {
           setCategoryTrends(categoryTrendsResponse);
           setPublishTimes(publishTimesResponse);
           setTitleKeywords(titleKeywordsResponse);
+          setSuggestions(suggestionsResponse);
         },
       )
       .catch((error) => {
@@ -102,7 +109,8 @@ export function CreatorAssistantPageContent() {
     hotContents.length === 0 ||
     categoryTrends.length === 0 ||
     publishTimes.length === 0 ||
-    titleKeywords.length === 0
+    titleKeywords.length === 0 ||
+    suggestions.length === 0
   ) {
     return (
       <EmptyState
@@ -123,6 +131,7 @@ export function CreatorAssistantPageContent() {
 
       <CreatorAssistantPublishTimeSection publishTimes={publishTimes} />
       <CreatorAssistantTitleKeywordSection keywords={titleKeywords} />
+      <CreatorAssistantSuggestionSection suggestions={suggestions} />
     </div>
   );
 }
