@@ -20,6 +20,7 @@ import type {
   AssistantSuggestion,
 } from '@/types/creator-assistant';
 
+import { FadeInSection } from '@/components/motion/fade-in-section';
 import { CreatorAssistantCategoryTrendSection } from './creator-assistant-category-trend-section';
 import { CreatorAssistantHotContentList } from './creator-assistant-hot-content-list';
 import { CreatorAssistantOverviewSection } from './creator-assistant-overview-section';
@@ -122,16 +123,28 @@ export function CreatorAssistantPageContent() {
 
   return (
     <div className="space-y-6">
-      <CreatorAssistantOverviewSection overview={overview} />
+      <FadeInSection delay={0}>
+        <CreatorAssistantOverviewSection overview={overview} />
+      </FadeInSection>
 
-      <div className="grid gap-6 xl:grid-cols-[minmax(0,1.35fr)_minmax(360px,0.85fr)]">
-        <CreatorAssistantHotContentList hotContents={hotContents} />
-        <CreatorAssistantCategoryTrendSection trends={categoryTrends} />
-      </div>
+      <FadeInSection delay={0.04}>
+        <div className="grid gap-6 xl:grid-cols-[minmax(0,1.35fr)_minmax(360px,0.85fr)]">
+          <CreatorAssistantHotContentList hotContents={hotContents} />
+          <CreatorAssistantCategoryTrendSection trends={categoryTrends} />
+        </div>
+      </FadeInSection>
 
-      <CreatorAssistantPublishTimeSection publishTimes={publishTimes} />
-      <CreatorAssistantTitleKeywordSection keywords={titleKeywords} />
-      <CreatorAssistantSuggestionSection suggestions={suggestions} />
+      <FadeInSection delay={0.08}>
+        <CreatorAssistantPublishTimeSection publishTimes={publishTimes} />
+      </FadeInSection>
+
+      <FadeInSection delay={0.12}>
+        <CreatorAssistantTitleKeywordSection keywords={titleKeywords} />
+      </FadeInSection>
+
+      <FadeInSection delay={0.16}>
+        <CreatorAssistantSuggestionSection suggestions={suggestions} />
+      </FadeInSection>
     </div>
   );
 }
