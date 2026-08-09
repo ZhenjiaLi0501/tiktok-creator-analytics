@@ -1,0 +1,50 @@
+[
+  {
+    "id": "suggestion_hot_category",
+    "title": "加大「音乐」内容供给",
+    "type": "category",
+    "priority": "high",
+    "reason": "音乐类内容当前趋势分最高，播放量和互动表现都较突出。",
+    "action": "建议优先选择该分类中的高互动选题，扶持同类创作者持续发布。"
+  },
+  {
+    "id": "suggestion_publish_time",
+    "title": "优先选择 周六 01:00 发布",
+    "type": "publish_time",
+    "priority": "high",
+    "reason": "该时段历史平均播放量较高，预计播放提升 NaN%。",
+    "action": "建议将重点内容安排在该时段前 30 分钟完成审核与排期。"
+  },
+  {
+    "id": "suggestion_title_keyword",
+    "title": "标题中加入「full」相关表达",
+    "type": "title",
+    "priority": "medium",
+    "reason": "该词在历史高表现内容中出现频率较高，具备一定点击吸引力。",
+    "action": "建议结合内容真实主题使用，不要堆砌关键词。"
+  },
+  {
+    "id": "suggestion_category_combo",
+    "title": "尝试「音乐 + 喜剧」组合选题",
+    "type": "topic",
+    "priority": "medium",
+    "reason": "两个分类均处于较高趋势区间，适合做跨垂类内容实验。",
+    "action": "建议先小流量测试标题和封面，再根据互动率扩大推荐。"
+  },
+  {
+    "id": "suggestion_second_time",
+    "title": "备用发布时间：周二 01:00",
+    "type": "publish_time",
+    "priority": "low",
+    "reason": "该时段样本竞争度为竞争较高，适合作为非头部内容发布时间。",
+    "action": "适合安排长尾内容或稳定更新内容。"
+  },
+  {
+    "id": "suggestion_hot_content",
+    "title": "参考 TOP 内容《YouTube Rewind: Th...》",
+    "type": "hot_content",
+    "priority": "high",
+    "reason": "该内容在播放量、互动率和评论表现上综合排名靠前。",
+    "action": "建议拆解其标题结构、内容节奏和分类标签，但避免直接复刻。"
+  }
+]

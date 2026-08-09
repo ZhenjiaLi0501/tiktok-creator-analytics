@@ -14,7 +14,8 @@
     "prepare": "husky",
     "data:build": "node scripts/build-dashboard-data.mjs",
     "data:content": "node scripts/build-content-data.mjs",
-    "data:audience": "node scripts/build-audience-data.mjs"
+    "data:audience": "node scripts/build-audience-data.mjs",
+    "data:assistant": "node scripts/build-assistant-data.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.6.0",

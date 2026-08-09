@@ -1,0 +1,314 @@
+[
+  {
+    "word": "full",
+    "count": 636,
+    "avgPlayCount": 1240479,
+    "score": 492,
+    "type": "hot_word",
+    "suggestion": "可用于标题关键词或话题标签，建议结合中文表达本地化改写。"
+  },
+  {
+    "word": "episode",
+    "count": 673,
+    "avgPlayCount": 359065,
+    "score": 462,
+    "type": "hot_word",
+    "suggestion": "可用于标题关键词或话题标签，建议结合中文表达本地化改写。"
+  },
+  {
+    "word": "new",
+    "count": 450,
+    "avgPlayCount": 1012927,
+    "score": 338,
+    "type": "hot_word",
+    "suggestion": "可用于标题关键词或话题标签，建议结合中文表达本地化改写。"
+  },
+  {
+    "word": "christmas",
+    "count": 456,
+    "avgPlayCount": 919353,
+    "score": 338,
+    "type": "hot_word",
+    "suggestion": "可用于标题关键词或话题标签，建议结合中文表达本地化改写。"
+  },
+  {
+    "word": "trailer",
+    "count": 276,
+    "avgPlayCount": 5464793,
+    "score": 330,
+    "type": "hot_word",
+    "suggestion": "可用于标题关键词或话题标签，建议结合中文表达本地化改写。"
+  },
+  {
+    "word": "trump",
+    "count": 447,
+    "avgPlayCount": 389693,
+    "score": 308,
+    "type": "hot_word",
+    "suggestion": "可用于标题关键词或话题标签，建议结合中文表达本地化改写。"
+  },
+  {
+    "word": "music",
+    "count": 346,
+    "avgPlayCount": 2221289,
+    "score": 302,
+    "type": "hot_word",
+    "suggestion": "可用于标题关键词或话题标签，建议结合中文表达本地化改写。"
+  },
+  {
+    "word": "game",
+    "count": 382,
+    "avgPlayCount": 816896,
+    "score": 280,
+    "type": "hot_word",
+    "suggestion": "可用于标题关键词或话题标签，建议结合中文表达本地化改写。"
+  },
+  {
+    "word": "songs",
+    "count": 323,
+    "avgPlayCount": 1225036,
+    "score": 250,
+    "type": "hot_word",
+    "suggestion": "可用于标题关键词或话题标签，建议结合中文表达本地化改写。"
+  },
+  {
+    "word": "best",
+    "count": 308,
+    "avgPlayCount": 901136,
+    "score": 228,
+    "type": "hot_word",
+    "suggestion": "可用于标题关键词或话题标签，建议结合中文表达本地化改写。"
+  },
+  {
+    "word": "all",
+    "count": 286,
+    "avgPlayCount": 1009990,
+    "score": 215,
+    "type": "hot_word",
+    "suggestion": "可用于标题关键词或话题标签，建议结合中文表达本地化改写。"
+  },
+  {
+    "word": "highlights",
+    "count": 255,
+    "avgPlayCount": 1130079,
+    "score": 195,
+    "type": "hot_word",
+    "suggestion": "可用于标题关键词或话题标签，建议结合中文表达本地化改写。"
+  },
+  {
+    "word": "song",
+    "count": 207,
+    "avgPlayCount": 2857344,
+    "score": 194,
+    "type": "hot_word",
+    "suggestion": "可用于标题关键词或话题标签，建议结合中文表达本地化改写。"
+  },
+  {
+    "word": "paul",
+    "count": 223,
+    "avgPlayCount": 2017806,
+    "score": 190,
+    "type": "hot_word",
+    "suggestion": "可用于标题关键词或话题标签，建议结合中文表达本地化改写。"
+  },
+  {
+    "word": "december",
+    "count": 267,
+    "avgPlayCount": 263052,
+    "score": 181,
+    "type": "hot_word",
+    "suggestion": "可用于标题关键词或话题标签，建议结合中文表达本地化改写。"
+  },
+  {
+    "word": "live",
+    "count": 231,
+    "avgPlayCount": 686118,
+    "score": 166,
+    "type": "hot_word",
+    "suggestion": "可用于标题关键词或话题标签，建议结合中文表达本地化改写。"
+  },
+  {
+    "word": "top",
+    "count": 221,
+    "avgPlayCount": 598734,
+    "score": 157,
+    "type": "hot_word",
+    "suggestion": "可用于标题关键词或话题标签，建议结合中文表达本地化改写。"
+  },
+  {
+    "word": "feat",
+    "count": 153,
+    "avgPlayCount": 3595150,
+    "score": 154,
+    "type": "hot_word",
+    "suggestion": "可用于标题关键词或话题标签，建议结合中文表达本地化改写。"
+  },
+  {
+    "word": "punjabi",
+    "count": 175,
+    "avgPlayCount": 2186409,
+    "score": 152,
+    "type": "hot_word",
+    "suggestion": "可用于标题关键词或话题标签，建议结合中文表达本地化改写。"
+  },
+  {
+    "word": "season",
+    "count": 217,
+    "avgPlayCount": 426678,
+    "score": 150,
+    "type": "hot_word",
+    "suggestion": "可用于标题关键词或话题标签，建议结合中文表达本地化改写。"
+  },
+  {
+    "word": "热点",
+    "count": 186,
+    "avgPlayCount": 22320000,
+    "score": 149,
+    "type": "structure",
+    "suggestion": "适合用于标题结构，提高点击预期。"
+  },
+  {
+    "word": "food",
+    "count": 209,
+    "avgPlayCount": 535916,
+    "score": 147,
+    "type": "hot_word",
+    "suggestion": "可用于标题关键词或话题标签，建议结合中文表达本地化改写。"
+  },
+  {
+    "word": "part",
+    "count": 203,
+    "avgPlayCount": 594746,
+    "score": 144,
+    "type": "hot_word",
+    "suggestion": "可用于标题关键词或话题标签，建议结合中文表达本地化改写。"
+  },
+  {
+    "word": "year",
+    "count": 190,
+    "avgPlayCount": 1099366,
+    "score": 144,
+    "type": "hot_word",
+    "suggestion": "可用于标题关键词或话题标签，建议结合中文表达本地化改写。"
+  },
+  {
+    "word": "show",
+    "count": 202,
+    "avgPlayCount": 463755,
+    "score": 141,
+    "type": "hot_word",
+    "suggestion": "可用于标题关键词或话题标签，建议结合中文表达本地化改写。"
+  },
+  {
+    "word": "挑战",
+    "count": 172,
+    "avgPlayCount": 20640000,
+    "score": 138,
+    "type": "interest",
+    "suggestion": "适合结合兴趣内容，提升用户触达。"
+  },
+  {
+    "word": "探店",
+    "count": 164,
+    "avgPlayCount": 19680000,
+    "score": 131,
+    "type": "interest",
+    "suggestion": "适合结合兴趣内容，提升用户触达。"
+  },
+  {
+    "word": "攻略",
+    "count": 152,
+    "avgPlayCount": 18240000,
+    "score": 122,
+    "type": "structure",
+    "suggestion": "适合用于标题结构，提高点击预期。"
+  },
+  {
+    "word": "合集",
+    "count": 148,
+    "avgPlayCount": 17760000,
+    "score": 118,
+    "type": "structure",
+    "suggestion": "适合用于标题结构，提高点击预期。"
+  },
+  {
+    "word": "开箱",
+    "count": 139,
+    "avgPlayCount": 16680000,
+    "score": 111,
+    "type": "interest",
+    "suggestion": "适合结合兴趣内容，提升用户触达。"
+  },
+  {
+    "word": "反转",
+    "count": 133,
+    "avgPlayCount": 15960000,
+    "score": 106,
+    "type": "structure",
+    "suggestion": "适合用于标题结构，提高点击预期。"
+  },
+  {
+    "word": "教程",
+    "count": 128,
+    "avgPlayCount": 15360000,
+    "score": 102,
+    "type": "category",
+    "suggestion": "适合结合垂类内容，强化内容定位。"
+  },
+  {
+    "word": "测评",
+    "count": 121,
+    "avgPlayCount": 14520000,
+    "score": 97,
+    "type": "interest",
+    "suggestion": "适合结合兴趣内容，提升用户触达。"
+  },
+  {
+    "word": "城市",
+    "count": 118,
+    "avgPlayCount": 14160000,
+    "score": 94,
+    "type": "interest",
+    "suggestion": "适合结合兴趣内容，提升用户触达。"
+  },
+  {
+    "word": "生活",
+    "count": 115,
+    "avgPlayCount": 13800000,
+    "score": 92,
+    "type": "category",
+    "suggestion": "适合结合垂类内容，强化内容定位。"
+  },
+  {
+    "word": "音乐",
+    "count": 108,
+    "avgPlayCount": 12960000,
+    "score": 86,
+    "type": "category",
+    "suggestion": "适合结合垂类内容，强化内容定位。"
+  },
+  {
+    "word": "美食",
+    "count": 104,
+    "avgPlayCount": 12480000,
+    "score": 83,
+    "type": "interest",
+    "suggestion": "适合结合兴趣内容，提升用户触达。"
+  },
+  {
+    "word": "穿搭",
+    "count": 98,
+    "avgPlayCount": 11760000,
+    "score": 78,
+    "type": "interest",
+    "suggestion": "适合结合兴趣内容，提升用户触达。"
+  },
+  {
+    "word": "剧情",
+    "count": 92,
+    "avgPlayCount": 11040000,
+    "score": 74,
+    "type": "interest",
+    "suggestion": "适合结合兴趣内容，提升用户触达。"
+  }
+]
