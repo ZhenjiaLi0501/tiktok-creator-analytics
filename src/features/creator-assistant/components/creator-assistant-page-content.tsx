@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
 
 import { EmptyState } from '@/components/common/empty-state';
 import {
@@ -26,8 +27,40 @@ import { CreatorAssistantHotContentList } from './creator-assistant-hot-content-
 import { CreatorAssistantOverviewSection } from './creator-assistant-overview-section';
 import { CreatorAssistantPageSkeleton } from './creator-assistant-page-skeleton';
 import { CreatorAssistantPublishTimeSection } from './creator-assistant-publish-time-section';
-import { CreatorAssistantTitleKeywordSection } from './creator-assistant-title-keyword-section';
-import { CreatorAssistantSuggestionSection } from './creator-assistant-suggestion-section';
+
+function AssistantSectionSkeleton({ title }: { title: string }) {
+  return (
+    <section className="rounded-2xl border border-slate-800 bg-slate-950/40 p-5">
+      <div className="h-6 w-40 animate-pulse rounded bg-slate-800" />
+      <div className="mt-2 h-4 w-80 animate-pulse rounded bg-slate-800" />
+      <div className="mt-5 flex h-[260px] items-center justify-center rounded-2xl border border-slate-800 bg-slate-950/60 text-sm text-slate-500">
+        {title}
+      </div>
+    </section>
+  );
+}
+
+const CreatorAssistantTitleKeywordSection = dynamic(
+  () =>
+    import('./creator-assistant-title-keyword-section').then(
+      (module) => module.CreatorAssistantTitleKeywordSection,
+    ),
+  {
+    ssr: false,
+    loading: () => <AssistantSectionSkeleton title="标题词频分析加载中..." />,
+  },
+);
+
+const CreatorAssistantSuggestionSection = dynamic(
+  () =>
+    import('./creator-assistant-suggestion-section').then(
+      (module) => module.CreatorAssistantSuggestionSection,
+    ),
+  {
+    ssr: false,
+    loading: () => <AssistantSectionSkeleton title="创作建议清单加载中..." />,
+  },
+);
 
 export function CreatorAssistantPageContent() {
   const [overview, setOverview] = useState<AssistantOverview | null>(null);
