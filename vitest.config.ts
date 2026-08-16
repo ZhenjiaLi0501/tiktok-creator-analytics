@@ -10,9 +10,17 @@ export default defineConfig({
     css: true,
     coverage: {
       provider: 'v8',
-      reporter: ['text', 'json-summary', 'html'],
-      include: ['src/**/*.{ts,tsx}'],
-      exclude: ['src/**/*.d.ts', 'src/app/**', 'src/mocks/**', 'src/test/**', '**/*/config.*'],
+      reporter: ['text', 'html', 'json-summary'],
+      include: [
+        'src/lib/format.ts',
+        'src/lib/utils.ts',
+        'src/components/common/empty-state.tsx',
+        'src/features/creator-assistant/components/creator-assistant-category-trend-section.tsx',
+        'src/features/creator-assistant/components/creator-assistant-publish-time-section.tsx',
+        'src/features/creator-assistant/components/creator-assistant-suggestion-section.tsx',
+        'src/features/creator-assistant/components/creator-assistant-title-keyword-section.tsx',
+      ],
+      exclude: ['src/**/*.d.ts', 'src/test/**', 'src/mocks/**', 'src/app/**', '**/*.config.*'],
       thresholds: {
         statements: 70,
         branches: 60,

@@ -1,7 +1,7 @@
 'use client';
 
 import { markPerformance, measurePerformance, observeLongTasks } from '@/lib/performance';
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState, useDeferredValue, useTransition } from 'react';
 import { EmptyState } from '@/components/common/empty-state';
 import { ContentListSkeleton } from './content-list-skeleton';
 import { Button } from '@/components/ui/button';
@@ -96,6 +96,10 @@ export function ContentPageContent() {
   const [items, setItems] = useState<ContentVideo[]>([]);
   const [categories, setCategories] = useState<string[]>([]);
   const [total, setTotal] = useState(0);
+  const [isPending, startTransition] = useTransition();
+  const deferredItems = useDeferredValue(items);
+  const listUpdating = isPending || deferredItems !== items;
+
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
   const [activeContent, setActiveContent] = useState<ContentVideo | null>(null);
   const [loading, setLoading] = useState(true);
@@ -133,9 +137,11 @@ export function ContentPageContent() {
   }, [buildRequestQuery, query]);
 
   const updateQuery = useCallback((updater: (currentQuery: QueryState) => QueryState) => {
-    setLoading(true);
     setErrorMessage('');
-    setQuery(updater);
+    setSelectedIds(new Set());
+    startTransition(() => {
+      setQuery(updater);
+    });
   }, []);
   useEffect(() => {
     return observeLongTasks();
@@ -155,9 +161,12 @@ export function ContentPageContent() {
           'content-list-request-start',
           'content-list-data-ready',
         );
-        setItems(response.list);
-        setTotal(response.total);
-        setSelectedIds(new Set());
+        startTransition(() => {
+          setItems(response.list);
+          setTotal(response.total);
+          setSelectedIds(new Set());
+          setLoading(false);
+        });
       })
       .catch((error) => {
         if (ignore) {
@@ -171,8 +180,6 @@ export function ContentPageContent() {
         if (ignore) {
           return;
         }
-
-        setLoading(false);
       });
 
     return () => {
@@ -397,8 +404,9 @@ export function ContentPageContent() {
       <div className="flex flex-col gap-3 rounded-2xl border border-slate-800 bg-slate-950/40 p-4 lg:flex-row lg:items-center lg:justify-between">
         <div className="text-sm text-slate-400">
           共 <span className="text-slate-100">{total.toLocaleString()}</span> 条内容，当前加载{' '}
-          <span className="text-slate-100">{items.length.toLocaleString()}</span> 条，已选{' '}
+          <span className="text-slate-100">{deferredItems.length.toLocaleString()}</span> 条，已选{' '}
           <span className="text-slate-100">{selectedIds.size}</span> 条。
+          {listUpdating ? <span className="ml-2 text-cyan-300">列表更新中...</span> : null}
         </div>
 
         <div className="flex flex-wrap gap-2">
@@ -439,14 +447,14 @@ export function ContentPageContent() {
 
       {loading ? (
         <ContentListSkeleton />
-      ) : items.length === 0 ? (
+      ) : deferredItems.length === 0 ? (
         <EmptyState
           title="暂无内容数据"
           description="当前筛选条件下没有匹配的视频内容，请调整关键词、分类或状态后重试。"
         />
       ) : (
         <ContentVirtualList
-          items={items}
+          items={deferredItems}
           selectedIds={selectedIds}
           onToggleSelect={handleToggleSelect}
           onOpenDetail={setActiveContent}

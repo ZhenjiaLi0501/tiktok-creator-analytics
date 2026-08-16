@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
 
 import {
   getAudienceDemographics,
@@ -17,10 +18,36 @@ import type {
 } from '@/types/audience';
 import { EmptyState } from '@/components/common/empty-state';
 import { AudiencePageSkeleton } from './audience-page-skeleton';
-import { AudienceRegionSection } from './audience-region-section';
 import { AudienceDemographicsSection } from './audience-demographics-section';
 import { AudienceOverviewSection } from './audience-overview-section';
-import { AudienceKeywordSection } from './audience-keyword-section';
+
+function VisualizationSkeleton({ title }: { title: string }) {
+  return (
+    <section className="rounded-2xl border border-slate-800 bg-slate-950/40 p-5">
+      <div className="h-6 w-40 animate-pulse rounded bg-slate-800" />
+      <div className="mt-2 h-4 w-80 animate-pulse rounded bg-slate-800" />
+      <div className="mt-5 flex h-[360px] items-center justify-center rounded-2xl border border-slate-800 bg-slate-950/60 text-sm text-slate-500">
+        {title}
+      </div>
+    </section>
+  );
+}
+
+const AudienceRegionSection = dynamic(
+  () => import('./audience-region-section').then((module) => module.AudienceRegionSection),
+  {
+    ssr: false,
+    loading: () => <VisualizationSkeleton title="中国区域热力图加载中..." />,
+  },
+);
+
+const AudienceKeywordSection = dynamic(
+  () => import('./audience-keyword-section').then((module) => module.AudienceKeywordSection),
+  {
+    ssr: false,
+    loading: () => <VisualizationSkeleton title="兴趣关键词云加载中..." />,
+  },
+);
 
 export function AudiencePageContent() {
   const [overview, setOverview] = useState<AudienceOverview | null>(null);
