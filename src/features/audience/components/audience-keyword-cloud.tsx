@@ -1,6 +1,7 @@
 'use client';
 
-import * as d3 from 'd3';
+import { extent } from 'd3-array';
+import { scaleOrdinal, scaleSqrt } from 'd3-scale';
 import { useMemo } from 'react';
 
 import type { AudienceKeyword } from '@/types/audience';
@@ -32,14 +33,13 @@ function buildKeywordNodes(keywords: AudienceKeyword[]): KeywordNode[] {
     return [];
   }
 
-  const valueExtent = d3.extent(keywords, (keyword) => keyword.value);
+  const valueExtent = extent(keywords, (keyword) => keyword.value);
   const minValue = valueExtent[0] ?? 0;
   const maxValue = valueExtent[1] ?? 1;
 
-  const fontSizeScale = d3.scaleSqrt().domain([minValue, maxValue]).range([14, 44]);
+  const fontSizeScale = scaleSqrt().domain([minValue, maxValue]).range([14, 44]);
 
-  const colorScale = d3
-    .scaleOrdinal<AudienceKeyword['type'], string>()
+  const colorScale = scaleOrdinal<AudienceKeyword['type'], string>()
     .domain(['category', 'interest'])
     .range(['#ff3b70', '#22d3ee']);
 

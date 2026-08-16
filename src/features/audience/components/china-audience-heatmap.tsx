@@ -1,6 +1,9 @@
 'use client';
 
-import * as d3 from 'd3';
+import { max } from 'd3-array';
+import { geoMercator, geoPath as createGeoPath } from 'd3-geo';
+import { interpolateRgb } from 'd3-interpolate';
+import { scaleSequential, scaleSqrt } from 'd3-scale';
 import type { Feature, FeatureCollection, GeoJsonProperties, Geometry } from 'geojson';
 import { useEffect, useMemo, useState } from 'react';
 
@@ -151,7 +154,7 @@ export function ChinaAudienceHeatmap({
   }, [chinaGeoJson]);
 
   const projection = useMemo(() => {
-    const currentProjection = d3.geoMercator();
+    const currentProjection = geoMercator();
 
     if (visibleChinaGeoJson) {
       currentProjection.fitExtent(
@@ -171,21 +174,20 @@ export function ChinaAudienceHeatmap({
       .translate([mapWidth / 2, mapHeight / 2 + 24]);
   }, [visibleChinaGeoJson]);
 
-  const geoPath = useMemo(() => d3.geoPath(projection), [projection]);
+  const geoPath = useMemo(() => createGeoPath(projection), [projection]);
 
   const heatPoints = useMemo<HeatPoint[]>(() => {
     if (regions.length === 0) {
       return [];
     }
 
-    const maxAudience = d3.max(regions, (region) => region.audienceCount) ?? 1;
+    const maxAudience = max(regions, (region) => region.audienceCount) ?? 1;
 
-    const radiusScale = d3.scaleSqrt().domain([0, maxAudience]).range([7, 27]);
+    const radiusScale = scaleSqrt().domain([0, maxAudience]).range([7, 27]);
 
-    const colorScale = d3
-      .scaleSequential()
+    const colorScale = scaleSequential()
       .domain([0, maxAudience])
-      .interpolator(d3.interpolateRgb('#22d3ee', '#ff3b70'));
+      .interpolator(interpolateRgb('#22d3ee', '#ff3b70'));
 
     return regions
       .map((region) => {
