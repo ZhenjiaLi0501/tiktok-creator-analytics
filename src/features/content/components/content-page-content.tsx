@@ -314,6 +314,7 @@ export function ContentPageContent() {
       <div className="rounded-2xl border border-slate-800 bg-slate-950/40 p-4">
         <div className="grid gap-3 lg:grid-cols-[minmax(240px,1fr)_160px_160px_160px_140px_auto]">
           <input
+            aria-label="搜索标题或创作者"
             value={keywordInput}
             onChange={(event) => setKeywordInput(event.target.value)}
             onKeyDown={(event) => {
@@ -326,6 +327,7 @@ export function ContentPageContent() {
           />
 
           <select
+            aria-label="选择内容分类"
             value={query.category}
             onChange={(event) =>
               updateQuery((currentQuery) => ({
@@ -344,6 +346,7 @@ export function ContentPageContent() {
           </select>
 
           <select
+            aria-label="选择内容状态"
             value={query.status}
             onChange={(event) =>
               updateQuery((currentQuery) => ({
@@ -361,6 +364,7 @@ export function ContentPageContent() {
           </select>
 
           <select
+            aria-label="选择排序字段"
             value={query.sortBy}
             onChange={(event) =>
               updateQuery((currentQuery) => ({
@@ -377,6 +381,7 @@ export function ContentPageContent() {
             ))}
           </select>
           <select
+            aria-label="选择排序顺序"
             value={query.sortOrder}
             onChange={(event) =>
               updateQuery((currentQuery) => ({

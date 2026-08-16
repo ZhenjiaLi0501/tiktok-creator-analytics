@@ -70,6 +70,7 @@ const ContentRow = memo(function ContentRow({
     <div style={style} className="px-3">
       <button
         type="button"
+        aria-label={`查看内容详情: ${item.title}`}
         data-content-row="true"
         onClick={() => data.onOpenDetail(item)}
         style={{ gridTemplateColumns: contentTableGridTemplate }}
@@ -85,6 +86,7 @@ const ContentRow = memo(function ContentRow({
         >
           <input
             type="checkbox"
+            aria-label={`选择内容: ${item.title}`}
             checked={selected}
             onChange={() => data.onToggleSelect(item.id)}
             className="h-4 w-4 rounded border-slate-600 bg-slate-950"
