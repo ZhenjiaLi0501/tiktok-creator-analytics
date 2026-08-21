@@ -1,715 +1,565 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TikTok Creator Analytics
 
-## Getting Started
+短视频创作者运营分析与内容管理系统。
+本项目是一个基于 **Next.js + React + TypeScript** 构建的前端中后台项目，面向平台运营和数据分析场景，模拟抖音平台侧对创作者生态、视频内容、观众画像和内容趋势的统一分析与管理能力。
 
-First, run the development server:
+项目不是单个创作者的个人后台，而是从 **平台运营视角** 出发，展示平台级创作者服务系统的产品形态。
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 项目功能
+
+### 1. 平台数据大盘
+
+路径：
+
+```txt
+/dashboard
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+功能包括：
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-# 短视频创作者运营分析与内容管理系统技术设计方案
-
-## 1. 项目定位
-
-本项目是一个面向短视频内容生态的平台级创作者运营分析与内容管理系统。
-
-系统以平台运营和数据分析视角为核心，面向平台内大量内容创作者及其发布的视频内容，提供创作者数据总览、内容管理、观众画像分析、热点趋势分析和创作辅助建议等能力。
-
-项目目标不是为某一个创作者提供个人后台，而是模拟内容平台侧创作者服务系统的前端产品形态，帮助运营人员从全局维度观察创作者生态、内容表现、用户画像和内容趋势。
-
-系统默认展示全平台数据，同时支持按照时间范围、内容分类、创作者类型、地区、终端、单个创作者、单个视频等维度进行筛选和下钻分析。
-
----
-
-## 2. 项目背景理解
-
-短视频平台通常会服务大量内容创作者。平台侧需要持续观察创作者生态，包括创作者增长、活跃度、内容发布趋势、热门内容分布、观众画像变化以及不同内容分类的表现。
-
-因此，本项目更接近“平台运营分析后台”，而不是“某个创作者自己的个人数据后台”。
-
-核心业务对象包括：
-
-- 创作者
-- 视频内容
-- 观众画像
-- 热点趋势
-- 内容分类
-- 平台运营指标
-
----
-
-## 3. 用户角色
-
-### 3.1 平台运营人员
-
-负责观察平台整体创作者生态，关注创作者增长、活跃创作者数量、内容发布量、热门内容趋势等数据。
-
-### 3.2 数据分析人员
-
-负责分析不同内容分类、不同地区、不同创作者类型下的数据表现，并通过图表和数据下钻发现问题。
-
-### 3.3 内容管理人员
-
-负责查看和管理平台内的视频内容列表，支持筛选、排序、详情查看和批量操作。
-
----
-
-## 4. 核心业务模块
-
-### 4.1 平台数据大盘
-
-#### 模块目标
-
-展示平台内创作者生态和内容表现的整体数据，是系统首页和核心入口。
-
-#### 核心功能
-
-- 视频发布总量
-- 总播放量
-- 总点赞量
-- 总评论量
-- 总分享量
-- 视频发布趋势
-- 播放、点赞、评论、分享趋势
+- 核心指标概览
+- 播放量、点赞量、评论量趋势
 - 内容分类占比
-- 热门内容榜单摘要
-
-#### 典型筛选条件
-
-- 时间范围：今日、近 7 日、近 30 日、自定义
-- 内容分类：美食、旅行、科技、娱乐、教育、游戏等
-- 地区：全国、省份、城市
+- 视频发布趋势
+- 时间范围筛选
+- ECharts 图表展示
+- 图表模块懒加载优化
 
 ---
 
-### 4.2 创作者分析
+### 2. 内容管理
 
-#### 模块目标
+路径：
 
-分析平台内创作者的整体分布、增长情况和头部创作者表现。
+```txt
+/content
+```
 
-#### 创作者列表字段
+功能包括：
 
-- 创作者名称
-- 创作者类型
-- 所属地区
-- 主营内容分类
-- 粉丝数
-- 视频数
-- 总播放量
-- 总点赞量
-- 状态
-
----
-
-### 4.3 内容管理
-
-#### 模块目标
-
-展示和管理平台内所有创作者发布的视频内容，并体现大规模数据列表渲染能力。
-
-#### 核心功能
-
-- 视频内容列表
-- 多条件筛选
+- 十万级视频内容 Mock 数据
+- `react-window` 虚拟滚动列表
+- 关键词搜索
+- 分类筛选
+- 状态筛选
 - 多字段排序
-- 十万级虚拟滚动列表
-- 视频详情侧边抽屉
-- 批量选中
-- 批量上下架
+- 批量发布
+- 批量下架
 - 批量删除
-- 列表首屏骨架屏
+- 视频详情抽屉
+- 骨架屏、空状态、错误状态
+- React 18 并发更新优化
 
-#### 内容列表字段
+说明：
 
-- 视频标题
-- 创作者名称
-- 内容分类
-- 发布时间
-- 播放量
-- 点赞量
-- 评论量
-- 分享量
-- 视频状态
+`/content` 页面保留了十万级数据压力测试口径。虚拟列表只渲染当前可视区域附近的少量 DOM 节点，但浏览器仍需要处理大 JSON 加载、解析、筛选和排序，因此在 Lighthouse 中可能出现较高 TBT。该设计用于验证大规模内容管理场景下的前端渲染能力。
 
 ---
 
-### 4.4 观众画像
+### 3. 观众画像
 
-#### 模块目标
+路径：
 
-分析平台用户整体画像，并支持按照内容分类、创作者类型、地区等维度下钻。
+```txt
+/audience
+```
 
-#### 核心功能
+功能包括：
 
+- 中国区观众画像概览
 - 性别分布
 - 年龄分布
 - 终端分布
-- 地域分布热力图
-- 兴趣标签词云
-- 活跃时间分布
-- 画像维度下钻
-- 深色模式下的图表适配
-
-#### 技术重点
-
-- ECharts 用于常规图表
-- D3.js 用于地域热力图和兴趣词云
-- Faker.js 用于生成模拟用户画像数据
+- 中国区域热力图
+- 重点城市热点气泡
+- 省份 / 城市下钻详情
+- 兴趣关键词云
+- 关键词下钻分析
+- 深色模式可视化适配
+- D3 子包按需导入
+- D3 重型模块懒加载
 
 ---
 
-### 4.5 创作助手
+### 4. 创作助手
 
-#### 模块目标
+路径：
 
-从平台侧分析热点内容趋势、发布时间规律和标题词频，为运营人员提供内容方向判断。
+```txt
+/assistant
+```
 
-#### 核心功能
+功能包括：
 
 - 热点内容榜单
-- 内容分类趋势
+- 分类趋势分析
 - 发布时间推荐
 - 标题词频分析
-- 热门关键词分析
-- 不同内容分类的创作建议
-- 空状态、错误状态和交互动效
-
-#### 说明
-
-这里的“创作助手”不是单独服务某一个创作者，而是从平台整体数据中分析趋势，为平台运营和创作者扶持提供参考。
-
----
-
-## 5. 技术栈
-
-| 分类       | 技术选型                                             | 说明                               |
-| ---------- | ---------------------------------------------------- | ---------------------------------- |
-| 核心框架   | Next.js 15 + React 18 + TypeScript 5.5               | 构建现代 React 中后台应用          |
-| 路由       | Next.js App Router                                   | 使用文件路由和布局嵌套管理页面     |
-| 样式       | TailwindCSS v3                                       | 原子化 CSS 和响应式布局            |
-| UI 组件    | shadcn/ui                                            | 可定制的高质量基础组件             |
-| 动效       | Framer Motion                                        | 页面转场、抽屉、卡片交互动效       |
-| 服务端状态 | TanStack Query v5                                    | 接口请求、缓存、刷新、错误状态管理 |
-| 客户端状态 | Zustand                                              | 登录态、筛选条件、UI 状态管理      |
-| Mock 接口  | MSW 2.0                                              | 模拟后端接口，支持无后端开发       |
-| 图表       | Apache ECharts 5 + D3.js v7                          | 常规图表和复杂自定义可视化         |
-| 高性能列表 | react-window                                         | 十万级数据虚拟滚动                 |
-| 工程规范   | ESLint + Prettier + Husky + commitlint + lint-staged | 代码规范和提交门禁                 |
-| 测试       | Vitest + React Testing Library                       | 核心组件和工具函数测试             |
-| 性能审计   | Lighthouse + Web Vitals                              | 首屏、交互和资源性能分析           |
-| 部署       | GitHub + Vercel                                      | 代码托管和线上部署                 |
+- 标题关键词下钻
+- 创作建议清单
+- 推荐理由与执行动作展示
+- Framer Motion 动画交互
+- 卡片 hover / tap 动效
+- 页面分区渐入动画
+- loading / empty / error 状态
 
 ---
 
-## 6. 路由设计
+## 技术栈
 
-### 6.1 路由总览
+| 分类         | 技术                                                 |
+| ------------ | ---------------------------------------------------- |
+| 核心框架     | Next.js / React / TypeScript                         |
+| 路由         | Next.js App Router                                   |
+| 样式         | TailwindCSS                                          |
+| UI 组件      | shadcn/ui                                            |
+| 图表         | Apache ECharts                                       |
+| 自定义可视化 | D3.js                                                |
+| 高性能列表   | react-window                                         |
+| 动效         | Framer Motion                                        |
+| Mock API     | MSW                                                  |
+| 测试         | Vitest + React Testing Library                       |
+| 代码规范     | ESLint + Prettier + Husky + lint-staged + commitlint |
+| 性能分析     | Lighthouse + Bundle Analyzer                         |
 
-| 路由         | 页面         | 说明                             |
-| ------------ | ------------ | -------------------------------- |
-| `/dashboard` | 平台数据大盘 | 展示平台核心指标和趋势           |
-| `/content`   | 内容管理     | 管理和分析平台视频内容           |
-| `/audience`  | 观众画像     | 展示用户画像和下钻分析           |
-| `/assistant` | 创作助手     | 分析热点内容、发布时间和标题词频 |
-| `/settings`  | 系统设置     | 基础设置页，低优先级             |
-| `/`          | 首页重定向   | 默认跳转到 `/dashboard`          |
+---
 
-### 6.2 App Router 目录结构
+## 项目目录
 
 ```txt
-src/
-  app/
-    layout.tsx
-    page.tsx
-    globals.css
-
-
-    (workspace)/
-      layout.tsx
-      dashboard/
-        page.tsx
-      content/
-        page.tsx
-      audience/
-        page.tsx
-      assistant/
-        page.tsx
-      settings/
-        page.tsx
+tiktok-creator-analytics
+├── data
+│   └── processed              # 清洗后的 Mock 数据
+├── docs                       # 项目文档
+│   ├── reports                # 周报 / 实验报告
+│   ├── assets                 # 截图和 Lighthouse 结果
+│   ├── api-reference.md       # API 接口文档
+│   ├── architecture.md        # 技术架构文档
+│   ├── deployment-guide.md    # 部署说明
+│   ├── testing-report.md      # 测试文档
+│   ├── performance-report.md  # 性能优化报告
+│   ├── final-report.md        # 结项报告
+│   └── demo-script.md         # 演示脚本
+├── public
+│   ├── maps
+│   │   └── china.geo.json     # 中国地图 GeoJSON
+│   ├── mock
+│   │   └── content-list.json  # 内容管理大数据 Mock
+│   └── mockServiceWorker.js   # MSW Service Worker
+├── scripts
+│   ├── build-dashboard-data.mjs
+│   ├── build-content-data.mjs
+│   ├── build-audience-data.mjs
+│   └── build-assistant-data.mjs
+├── src
+│   ├── app                    # Next.js App Router 页面
+│   ├── components             # 通用组件
+│   ├── features               # 业务模块
+│   ├── lib                    # 工具函数
+│   ├── mocks                  # MSW Mock
+│   ├── services               # 请求封装
+│   ├── test                   # 测试环境配置
+│   └── types                  # TypeScript 类型
+├── README.md
+├── package.json
+├── next.config.ts
+├── vitest.config.ts
+└── tsconfig.json
 ```
 
 ---
 
-## 7. 布局设计
+## 快速开始
 
-### 7.1 桌面端布局
+### 1. 安装依赖
 
-桌面端采用中后台布局：
+```bash
+pnpm install
+```
+
+### 2. 生成 Mock 数据
+
+首次运行前建议依次生成数据：
+
+```bash
+pnpm data:build
+pnpm data:content
+pnpm data:audience
+pnpm data:assistant
+```
+
+说明：
+
+- `data:build`：生成 Dashboard 数据
+- `data:content`：生成内容管理十万级视频数据
+- `data:audience`：生成中国区观众画像数据
+- `data:assistant`：生成创作助手分析数据
+
+如果内容管理模块依赖 `public/mock/content-list.json`，需要确保该文件存在。可将 `data/processed/content-list.json` 复制到：
 
 ```txt
-┌────────────────────────────────────────────┐
-│ TopBar                                     │
-├──────────────┬─────────────────────────────┤
-│ Sidebar      │ Main Content                │
-│ Navigation   │ Page Header                 │
-│              │ Filter Bar                  │
-│              │ Cards / Charts / Tables     │
-└──────────────┴─────────────────────────────┘
+public/mock/content-list.json
 ```
 
-### 7.2 移动端布局
+---
 
-移动端采用轻量化布局：
+### 3. 启动开发环境
+
+```bash
+pnpm dev
+```
+
+浏览器访问：
 
 ```txt
-┌──────────────────────────┐
-│ Mobile Header            │
-├──────────────────────────┤
-│ Page Content             │
-│ Cards                    │
-│ Charts                   │
-│ Lists                    │
-├──────────────────────────┤
-│ Bottom Tab Navigation    │
-└──────────────────────────┘
+http://localhost:3000
 ```
 
-### 7.3 响应式策略
-
-| 屏幕宽度       | 布局策略                         |
-| -------------- | -------------------------------- |
-| >= 1024px      | 左侧导航 + 顶部栏 + 多列内容区   |
-| 768px - 1023px | 折叠侧边栏 + 两列卡片布局        |
-| < 768px        | 顶部标题栏 + 底部 Tab + 单列布局 |
-
----
-
-## 8. 项目目录结构
+默认会跳转到：
 
 ```txt
-src/
-  app/
-    (workspace)/
-    layout.tsx
-    page.tsx
-    globals.css
-
-  components/
-    layout/
-      app-sidebar.tsx
-      app-topbar.tsx
-      mobile-tabbar.tsx
-      page-container.tsx
-
-    common/
-      loading.tsx
-      empty-state.tsx
-      error-state.tsx
-      status-badge.tsx
-
-    business/
-      metric-card.tsx
-      filter-bar.tsx
-      data-table.tsx
-      drawer-panel.tsx
-      batch-action-bar.tsx
-
-    charts/
-      line-chart.tsx
-      pie-chart.tsx
-      bar-chart.tsx
-      region-map.tsx
-      word-cloud.tsx
-
-  features/
-    dashboard/
-    content/
-    audience/
-    assistant/
-
-  services/
-    dashboard.ts
-    content.ts
-    audience.ts
-    assistant.ts
-
-  stores/
-    filter-store.ts
-    ui-store.ts
-
-  hooks/
-    use-mobile.ts
-    use-debounce.ts
-
-  lib/
-    request.ts
-    format.ts
-    constants.ts
-
-  mocks/
-    browser.ts
-    handlers.ts
-    data/
-      dashboard.ts
-      content.ts
-      audience.ts
-      assistant.ts
-    handlers/
-      dashboard.ts
-      content.ts
-      audience.ts
-      assistant.ts
-
-  types/
-    api.ts
-    dashboard.ts
-    content.ts
-    audience.ts
-    assistant.ts
+/dashboard
 ```
 
 ---
 
-## 9. 状态管理设计
+## 生产模式本地运行
 
-### 9.1 服务端状态
+项目本地生产模式仍然使用 MSW 提供 Mock API，因此需要在 build 前配置环境变量。
 
-使用 TanStack Query 管理接口数据，包括：
+### 1. 创建 `.env.local`
 
-- 数据大盘指标
-- 趋势图数据
-- 视频内容列表
-- 视频详情
-- 观众画像数据
-- 热点榜单数据
-
-### 9.2 客户端状态
-
-使用 Zustand 管理本地 UI 状态，包括：
-
-- 全局筛选条件
-- 侧边栏展开收起
-- 移动端底部导航
-- 主题模式
-
----
-
-## 10. 数据模型设计
-
-```ts
-export type VideoStatus = 'published' | 'reviewing' | 'offline' | 'deleted';
-
-export type Video = {
-  id: string;
-  creatorId: string;
-  creatorName: string;
-  creatorAvatar: string;
-  title: string;
-  coverUrl: string;
-  category: string;
-  platform: 'douyin';
-  status: VideoStatus;
-  duration: number;
-  playCount: number;
-  likeCount: number;
-  commentCount: number;
-  shareCount: number;
-  engagementRate: number;
-  publishTime: string;
-};
+```env
+NEXT_PUBLIC_API_MOCKING=enabled
 ```
 
-### 10.3 平台总览模型
-
-```ts
-export type PlatformOverview = {
-  totalCreators: number;
-  activeCreators: number;
-  newCreators: number;
-  totalVideos: number;
-  totalPlayCount: number;
-  totalLikeCount: number;
-  totalCommentCount: number;
-  totalShareCount: number;
-  avgEngagementRate: number;
-};
-```
-
-### 10.4 趋势数据模型
-
-```ts
-export type TrendPoint = {
-  date: string;
-  playCount: number;
-  likeCount: number;
-  commentCount: number;
-  shareCount: number;
-  activeCreators: number;
-  publishedVideos: number;
-};
-```
-
-### 10.5 观众画像模型
-
-```ts
-export type AudienceProfile = {
-  gender: {
-    male: number;
-    female: number;
-    unknown: number;
-  };
-  ageGroups: {
-    label: string;
-    value: number;
-  }[];
-  devices: {
-    device: 'iOS' | 'Android' | 'Web';
-    value: number;
-  }[];
-  regions: {
-    province: string;
-    value: number;
-  }[];
-  interests: {
-    label: string;
-    value: number;
-  }[];
-};
-```
-
----
-
-## 11. API 设计
-
-### 11.1 数据大盘接口
-
-| 方法 | 接口                        | 说明             |
-| ---- | --------------------------- | ---------------- |
-| GET  | `/api/dashboard/overview`   | 获取平台核心指标 |
-| GET  | `/api/dashboard/trend`      | 获取平台趋势数据 |
-| GET  | `/api/dashboard/categories` | 获取内容分类分布 |
-| GET  | `/api/dashboard/top-rank`   | 获取榜单摘要     |
-
-示例：
+### 2. 确认 MSW 文件存在
 
 ```txt
-GET /api/dashboard/overview?dateRange=7d&platform=douyin&category=all
+public/mockServiceWorker.js
 ```
 
-### 11.2 创作者接口
+如果不存在，执行：
 
-| 方法 | 接口                       | 说明                     |
-| ---- | -------------------------- | ------------------------ |
-| GET  | `/api/creators/list`       | 获取创作者列表           |
-| GET  | `/api/creators/ranking`    | 获取创作者排行榜         |
-| GET  | `/api/creators/:id`        | 获取创作者详情           |
-| GET  | `/api/creators/:id/videos` | 获取某个创作者的视频列表 |
+```bash
+pnpm exec msw init public/ --save
+```
 
-### 11.3 内容管理接口
+### 3. 构建并启动
 
-| 方法   | 接口                        | 说明             |
-| ------ | --------------------------- | ---------------- |
-| GET    | `/api/content/list`         | 获取视频内容列表 |
-| GET    | `/api/content/:id`          | 获取视频详情     |
-| PATCH  | `/api/content/batch-status` | 批量修改视频状态 |
-| DELETE | `/api/content/batch-delete` | 批量删除视频     |
+```bash
+pnpm build
+pnpm start
+```
 
-### 11.4 观众画像接口
-
-| 方法 | 接口                      | 说明               |
-| ---- | ------------------------- | ------------------ |
-| GET  | `/api/audience/profile`   | 获取基础画像数据   |
-| GET  | `/api/audience/region`    | 获取地域热力图数据 |
-| GET  | `/api/audience/interests` | 获取兴趣标签数据   |
-
-### 11.5 创作助手接口
-
-| 方法 | 接口                                | 说明             |
-| ---- | ----------------------------------- | ---------------- |
-| GET  | `/api/assistant/hot-rank`           | 获取热点内容榜单 |
-| GET  | `/api/assistant/category-trend`     | 获取分类趋势     |
-| GET  | `/api/assistant/publish-suggestion` | 获取发布时间推荐 |
-| POST | `/api/assistant/title-analysis`     | 标题词频分析     |
-
----
-
-## 12. Mock 数据设计
-
-### 12.1 Mock 数据来源
-
-本项目使用两类数据：
-
-1. 公开视频数据集  
-   用于模拟热门视频、发布时间、分类、播放量、点赞数、评论数等内容数据。
-
-2. Faker.js 生成数据  
-   用于生成创作者、用户画像、兴趣标签、地域分布等模拟数据。
-
-### 12.2 Mock 数据规模
-
-| 数据类型     | 模拟规模                    |
-| ------------ | --------------------------- |
-| 创作者数据   | 1,000 - 10,000 条           |
-| 视频内容数据 | 100,000 条                  |
-| 观众画像数据 | 10,000 - 100,000 条聚合模拟 |
-| 热点榜单数据 | 100 - 1,000 条              |
-
----
-
-## 13. 数据请求流程
-
-页面数据统一通过以下链路获取：
+访问：
 
 ```txt
-Page / Component
-  -> feature hooks
-  -> TanStack Query
+http://localhost:3000
+```
+
+说明：
+
+本项目生产模式下使用 MSW 主要是为了本地演示和前端 Mock 测试。真实线上环境中，可以将 MSW 替换为真实后端接口或 Next.js Route Handlers。
+
+---
+
+## 常用命令
+
+```bash
+# 开发
+pnpm dev
+
+# 构建
+pnpm build
+
+# 启动生产模式
+pnpm start
+
+# ESLint 检查
+pnpm lint
+
+# TypeScript 检查
+pnpm type-check
+
+# 格式化
+pnpm format
+
+# 单元测试
+pnpm test
+
+# 测试覆盖率
+pnpm test:coverage
+
+# Bundle Analyzer
+pnpm build:analyze
+
+# 生成 Dashboard 数据
+pnpm data:build
+
+# 生成 Content 数据
+pnpm data:content
+
+# 生成 Audience 数据
+pnpm data:audience
+
+# 生成 Assistant 数据
+pnpm data:assistant
+```
+
+---
+
+## Mock 数据说明
+
+项目使用公开数据集清洗后的结果作为基础数据来源，并通过脚本生成不同模块所需的 Mock 数据。
+
+数据链路：
+
+```txt
+公开视频数据
+  -> scripts 数据清洗脚本
+  -> data/processed/*.json
+  -> MSW Mock API
   -> services/*
-  -> fetch request
-  -> MSW handlers
-  -> mock data
+  -> 页面组件
+```
+
+主要数据文件：
+
+```txt
+data/processed/dashboard-*.json
+data/processed/content-*.json
+data/processed/audience-*.json
+data/processed/assistant-*.json
+```
+
+其中：
+
+- Dashboard 数据用于平台数据大盘
+- Content 数据用于十万级内容管理列表
+- Audience 数据用于中国区观众画像
+- Assistant 数据用于热点榜单、发布时间推荐和标题词频分析
+
+---
+
+## API 概览
+
+项目接口由 MSW Mock 提供，主要包括以下几组。
+
+### Dashboard
+
+```txt
+GET /api/dashboard/overview
+GET /api/dashboard/trend
+GET /api/dashboard/categories
+GET /api/dashboard/publish-trend
+```
+
+### Content
+
+```txt
+GET  /api/content/list
+GET  /api/content/categories
+GET  /api/content/:id
+POST /api/content/batch-status
+POST /api/content/batch-delete
+```
+
+### Audience
+
+```txt
+GET /api/audience/overview
+GET /api/audience/demographics
+GET /api/audience/regions
+GET /api/audience/regions/:regionId
+GET /api/audience/keywords
+```
+
+### Creator Assistant
+
+```txt
+GET /api/creator-assistant/overview
+GET /api/creator-assistant/hot-contents
+GET /api/creator-assistant/category-trends
+GET /api/creator-assistant/publish-times
+GET /api/creator-assistant/title-keywords
+GET /api/creator-assistant/suggestions
+```
+
+完整接口定义见：
+
+```txt
+docs/api-reference.md
+```
+
+---
+
+## 测试与质量保障
+
+项目接入：
+
+```txt
+Vitest
+React Testing Library
+@testing-library/jest-dom
+@testing-library/user-event
+@vitest/coverage-v8
+```
+
+当前测试重点包括：
+
+- 工具函数测试
+- 通用组件测试
+- 创作助手核心组件测试
+- 交互状态切换测试
+- 空状态和异常状态测试
+
+运行测试：
+
+```bash
+pnpm test
+```
+
+生成覆盖率报告：
+
+```bash
+pnpm test:coverage
+```
+
+测试报告见：
+
+```txt
+docs/testing-report.md
+```
+
+---
+
+## 性能优化
+
+项目已完成以下性能优化：
+
+1. Dashboard 图表模块动态加载。
+2. Audience D3 地图和关键词云动态加载。
+3. Assistant Framer Motion 交互模块动态加载。
+4. D3 全量导入改为子包按需导入。
+5. Content 十万级列表使用 `react-window` 虚拟滚动。
+6. Content 列表更新接入 React 18 `useTransition` 和 `useDeferredValue`。
+7. 大型 Mock JSON 从业务 bundle 中剥离。
+8. 图片格式和远程图片域名配置优化。
+9. 地图和 Mock 静态资源缓存策略优化。
+10. 使用 Bundle Analyzer 分析客户端依赖体积。
+11. 使用 Lighthouse 对核心页面进行性能审计。
+
+Lighthouse 最终结果摘要：
+
+| 页面         | Performance | Accessibility | Best Practices | SEO |
+| ------------ | ----------: | ------------: | -------------: | --: |
+| `/dashboard` |         100 |            95 |            100 | 100 |
+| `/content`   |          85 |            92 |            100 | 100 |
+| `/audience`  |          99 |            95 |            100 | 100 |
+| `/assistant` |         100 |            95 |            100 | 100 |
+
+说明：
+
+`/content` 页面为了保留十万级内容管理压力测试场景，一次性加载和处理 100000 条 Mock 数据，因此 TBT 相对较高。该页面的主要瓶颈来自大数据加载、解析、筛选和排序，而不是 DOM 渲染。真实业务场景中可通过服务端分页、接口排序、Web Worker 或增量加载进一步优化。
+
+完整性能报告见：
+
+```txt
+docs/performance-report.md
+```
+
+---
+
+## 工程规范
+
+项目使用以下工具保证工程质量：
+
+```txt
+ESLint
+Prettier
+Husky
+lint-staged
+commitlint
+TypeScript strict mode
+```
+
+提交信息格式：
+
+```txt
+<type>(scope): <subject>
 ```
 
 示例：
 
+```bash
+feat(content): add virtual content list
+perf(audience): use granular d3 imports
+test(assistant): add core interaction tests
+docs(report): add week 7 lab report
+```
+
+常用 type：
+
 ```txt
-DashboardPage
-  -> useDashboardOverviewQuery
-  -> getDashboardOverview
-  -> GET /api/dashboard/overview
-  -> dashboardHandler
-  -> dashboardMockData
+feat
+fix
+docs
+style
+refactor
+perf
+test
+chore
 ```
 
 ---
 
-## 14. 工程规范
+## 文档入口
 
-### 14.1 代码规范
-
-项目使用：
-
-- ESLint
-- Prettier
-- TypeScript strict mode
-- lint-staged
-- Husky
-- commitlint
-
-### 14.2 代码要求
-
-- 禁止未使用变量
-- 尽量避免 `any`
-- 组件 Props 必须声明类型
-- API 返回值必须声明类型
-- 通用逻辑抽离到 hooks 或 lib
-- 页面组件不直接写复杂数据处理逻辑
-- Mock 数据和业务组件解耦
+```txt
+docs/architecture.md         技术架构文档
+docs/api-reference.md        API 接口定义
+docs/testing-report.md       测试文档
+docs/performance-report.md   性能优化报告
+docs/deployment-guide.md     部署说明
+docs/final-report.md         结项报告
+docs/demo-script.md          演示脚本
+docs/reports/                周实验报告
+```
 
 ---
 
-## 15. 移动端适配方案
+## 项目亮点
 
-虽然项目主要是中后台系统，但仍需要适配移动端查看体验。
+1. **平台级运营视角**
+   项目不是个人创作者后台，而是模拟平台侧创作者运营分析系统。
 
-### 15.1 移动端原则
+2. **十万级内容管理列表**
+   使用 `react-window` 实现大规模数据虚拟滚动，支持筛选、排序、批量操作和详情抽屉。
 
-- 移动端不完整复刻桌面端复杂表格
-- 核心指标改为卡片纵向排列
-- 图表自适应容器宽度
-- 内容列表改为卡片列表
-- 复杂筛选收纳到抽屉
-- 底部导航替代桌面端侧边栏
+3. **多维数据可视化**
+   使用 ECharts 实现常规图表，使用 D3 实现中国区域热力图和关键词云。
 
-### 15.2 各模块移动端表现
+4. **创作辅助决策**
+   基于历史内容数据生成热点榜单、分类趋势、发布时间推荐、标题词频分析和创作建议。
 
-| 模块       | 移动端适配方式                  |
-| ---------- | ------------------------------- |
-| 数据大盘   | 指标卡单列 / 双列，图表纵向排列 |
-| 创作者分析 | 创作者表格改为创作者卡片        |
-| 内容管理   | 视频表格改为视频卡片列表        |
-| 观众画像   | 图表缩放，地图支持横向滚动      |
-| 创作助手   | 榜单和建议卡片纵向排列          |
+5. **完整 Mock 数据链路**
+   通过数据清洗脚本生成 Dashboard、Content、Audience、Assistant 多模块 Mock 数据。
 
----
+6. **性能专项优化**
+   完成动态加载、D3 按需导入、虚拟滚动、静态资源缓存、Bundle Analyzer 和 Lighthouse 审计。
 
-## 16. 性能优化方案
-
-### 16.1 首屏优化
-
-- 路由级代码分割
-- 图表组件动态加载
-- 非首屏模块懒加载
-- 骨架屏提升加载体验
-- 图片资源压缩和懒加载
-
-### 16.2 大列表优化
-
-- 使用 `react-window` 虚拟滚动
-- 避免十万条数据一次性渲染
-- 筛选和搜索使用防抖
-- 列表项组件使用 memo 降低重复渲染
-- 大量数据处理可以作为后续 Web Worker 扩展方向
-
-### 16.3 图表优化
-
-- 图表按需加载
-- 大数据图表使用采样或聚合数据
-- 监听容器 resize，避免频繁重绘
-- tooltip 和交互事件节流
-- 深色模式下保持图表可读性
+7. **质量保障体系**
+   接入 Vitest、Testing Library、ESLint、Prettier、Husky、commitlint，覆盖核心组件和工具函数。
 
 ---
 
-## 17. 测试方案
+## 已知说明
 
-### 17.1 测试范围
-
-优先测试：
-
-- 通用组件
-- 工具函数
-- API 数据处理函数
-- 筛选逻辑
-- 标题词频分析逻辑
-- 发布时间推荐逻辑
-
-### 17.2 测试工具
-
-- Vitest
-- React Testing Library
-
-### 17.3 测试目标
-
-核心组件测试覆盖率达到 70% 以上。
-
----
+- 当前项目以本地演示和前端 Mock 为主，生产模式仍依赖 MSW。
+- `data/raw/` 原始数据集不建议提交到 GitHub。
+- `data/processed/` 为项目运行所需的处理后 Mock 数据，可以保留。
+- `/content` 页面保留十万级全量数据压力测试，因此 Lighthouse TBT 高于其他页面。
+- 后续真实上线时，建议将 MSW 替换为真实后端 API 或 Next.js Route Handlers。
